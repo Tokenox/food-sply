@@ -1,6 +1,7 @@
 import { NavbarItems } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
+import Button from "./Button";
 
 const Navbar = () => {
   return (
@@ -13,7 +14,7 @@ const Navbar = () => {
           </p>
         ))}
       </div>
-      <button>Login</button>
+      <Button type={"border"}>Login</Button>
     </div>
   );
 };

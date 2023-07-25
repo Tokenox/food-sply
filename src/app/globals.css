@@ -33,3 +33,20 @@ body {
   transition: all 0.2s linear;
   transform: scale(1.1);
 }
+
+.button-border {
+  position: relative;
+ 
+}
+.button-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 42px;
+  padding: 1px;
+  background: linear-gradient(to right, #ff9700, #58f96e);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

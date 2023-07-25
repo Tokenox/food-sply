@@ -19,3 +19,17 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+.section-padding-x {
+  margin-left: 105px;
+  margin-right: 105px;
+}
+
+.navbar-hover-effect:hover {
+  color: #39b54a;
+  font-weight: 700;
+  border-bottom: 2px solid #f7941d;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  transform: scale(1.1);
+}

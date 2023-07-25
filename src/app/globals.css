@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --linear-transition-all: all 0.2s linear;
+  --transform-scale: scale(1.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,13 +29,17 @@ body {
   font-weight: 700;
   border-bottom: 2px solid #f7941d;
   cursor: pointer;
-  transition: all 0.2s linear;
-  transform: scale(1.1);
+  transition: var(--linear-transition-all);
+  transform: var(--transform-scale);
 }
 
 .button-border {
   position: relative;
- 
+  color: #fff;
+}
+.button-border:hover {
+  transition: var(--linear-transition-all);
+  transform: var(--transform-scale);
 }
 .button-border::after {
   content: "";

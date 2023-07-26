@@ -67,6 +67,22 @@ const Header = () => {
             </div>
           </div>
         </div>
+        {/* Second Col */}
+        <div className="custom-border backdrop-blur-[6px] text-white py-6 px-5">
+          <p className="text-[22px] font-bold text-center">Token Swap</p>
+          <div className="">
+            <label>From</label>
+            <div className="bg-night flex p-2 rounded-full w-[324px]">
+              <div className="rounded-full bg-dark py-3 px-5 flex gap-6">
+                <div className="flex gap-2">
+                  <Image src={"/icon/eth-icon.png"} alt="Ethereum" width={22} height={22} />
+                  <b>USDT</b>
+                </div>
+                <Image src={"/icon/down-arrow.svg"} alt="Arrow Down" width={13} height={22} />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

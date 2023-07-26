@@ -14,6 +14,7 @@ const Features = () => {
             key={item.id}
             title={item.title}
             slug={item.slug}
+            width={item.width}
             description={item.description}
           />
         ))}

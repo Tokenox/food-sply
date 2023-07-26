@@ -13,12 +13,14 @@ const ServiceProvide = () => {
         </p>
       </div>
       {/* Second col */}
-      <Image
-        src={"/svg/service-provide.svg"}
-        alt="Food sply services provides"
-        width={575}
-        height={320}
-      />
+      <div className="w-[50%] flex justify-end">
+        <Image
+          src={"/svg/service-provide.svg"}
+          alt="Food sply services provides"
+          width={700}
+          height={320}
+        />
+      </div>
     </div>
   );
 };

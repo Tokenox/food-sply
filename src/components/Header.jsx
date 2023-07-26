@@ -35,14 +35,14 @@ const Header = () => {
   };
 
   return (
-    <div className="h-screen bg-[url('/images/header-bg-img.svg')] bg-no-repeat bg-cover bg-center pt-4">
+    <div className="h-screen bg-[url('/svg/header-bg.svg')] bg-no-repeat bg-cover bg-center pt-4">
       <Navbar />
       <div className="section-padding-x flex justify-between items-center h-[75%]">
         {/* First Col */}
         <div className="flex flex-col gap-[38px]">
           <div>
             <div className="mb-5">
-              <Image src={"/images/new-era.png"} alt="New Era" width={344} height={38} />
+              <Image src={"/svg/new-era.svg"} alt="New Era" width={344} height={30} />
             </div>
             <div>
               <Image src={"/images/agri-tech.png"} alt="Agri Tech" width={414} height={183} />

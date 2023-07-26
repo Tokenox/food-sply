@@ -21,9 +21,18 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.section-padding {
+  margin: 100px 105px;
+}
+
 .section-padding-x {
   margin-left: 105px;
   margin-right: 105px;
+}
+
+.section-padding-y {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .navbar-hover-effect:hover {

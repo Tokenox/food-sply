@@ -19,6 +19,7 @@ module.exports = {
         night: "#252F34",
         dark: "#ffffff1a",
         silver: "##C2C2C2",
+        green: "#326542",
         "text-grey": "#A0A0A0",
       },
     },

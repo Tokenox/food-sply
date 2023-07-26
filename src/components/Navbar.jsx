@@ -14,7 +14,7 @@ const Navbar = () => {
           </p>
         ))}
       </div>
-      <Button type={"border"}>Login</Button>
+      <Button type={"outline"}>Login</Button>
     </div>
   );
 };

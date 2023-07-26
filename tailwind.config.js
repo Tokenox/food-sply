@@ -18,6 +18,8 @@ module.exports = {
         black: "#000000",
         night: "#252F34",
         dark: "#ffffff1a",
+        silver: "##C2C2C2",
+        "text-grey": "#A0A0A0",
       },
     },
   },

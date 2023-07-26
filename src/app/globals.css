@@ -78,6 +78,15 @@ body {
   pointer-events: none;
 }
 
-.filled-box {
+.box-filled {
   background: linear-gradient(180deg, #87ff98 0%, #f7941d 83.33%);
+}
+
+.button-filled {
+  background: linear-gradient(180deg, #87ff98 0%, #f7941d 83.33%);
+}
+
+.button-filled:hover {
+  transition: var(--linear-transition-all);
+  transform: var(--transform-scale);
 }

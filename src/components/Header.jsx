@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Button from "./Button";
-import Divider from "./Divider";
+import Button from "../common/Button";
+import Divider from "../common/Divider";
 import Navbar from "./Navbar";
 
 const Header = () => {

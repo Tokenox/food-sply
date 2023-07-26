@@ -1,7 +1,7 @@
 import { NavbarItems } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
-import Button from "./Button";
+import Button from "../common/Button";
 
 const Navbar = () => {
   return (

@@ -65,6 +65,11 @@ body {
   pointer-events: none;
 }
 
+.link:hover {
+  transition: var(--linear-transition-all);
+  transform: var(--transform-scale);
+}
+
 .text-shadow {
   text-shadow: 0px 0px 20px #ff9700;
 }
@@ -98,4 +103,17 @@ body {
 .button-filled:hover {
   transition: var(--linear-transition-all);
   transform: var(--transform-scale);
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 10px 0px #c9c9c9;
+}
+/* //! Feature cars */
+.feature-card {
+}
+
+.feature-card:hover {
+  box-shadow: 0px 0px 10px 0px #c9c9c9;
+  transition: var(--linear-transition-all);
+  transform: scale(1.03);
 }

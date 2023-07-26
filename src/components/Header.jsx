@@ -115,7 +115,7 @@ const Header = () => {
       </div>
       {/* Header Bottom */}
       <div className="section-padding-x text-white flex flex-col items-center">
-        <div className="w-[690px] text-center">
+        <div className="w-[600px] text-center">
           <p className="pb-5">
             We are feeding the world, by providing a frictionless food supply chain marketplace that
             brings together all parties in the agri-food value chain.

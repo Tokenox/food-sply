@@ -75,3 +75,26 @@ export const FeatureData = [
       "Foodsply goal is to faciliate trustless exchange between users of the platform, by doing this we can foster together and reduce bottle necks.",
   },
 ];
+
+export const PopularProducts = [
+  {
+    id: 1,
+    image: "/svg/popular-product/product1.svg",
+  },
+  {
+    id: 2,
+    image: "/svg/popular-product/product2.svg",
+  },
+  {
+    id: 3,
+    image: "/svg/popular-product/product3.svg",
+  },
+  {
+    id: 4,
+    image: "/svg/popular-product/product2.svg",
+  },
+  {
+    id: 5,
+    image: "/svg/popular-product/product1.svg",
+  },
+];

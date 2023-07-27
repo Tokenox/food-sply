@@ -1,5 +1,6 @@
-'use client';
+"use client";
 import Carousel from "@/common/Carousel";
+import { PopularProducts } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -32,7 +33,7 @@ const OurProducts = () => {
             Most popular in list
           </h2>
           <div>
-            <Carousel />
+            <Carousel data={PopularProducts} />
           </div>
         </div>
       </div>

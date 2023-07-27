@@ -4,37 +4,59 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import classNames from "classnames";
+import Image from "next/image";
 
-const Carousel = () => {
+const Carousel = ({ data }) => {
   return (
-    <Slider {...settings} className='px-20'>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
+    <Slider {...settings} className="px-20">
+      {data?.map((item, index) => (
+        <div key={item.id} className={classNames(" px-2 !flex justify-center h-[520px]", {})}>
+          <Image
+            src={item.image}
+            alt="Popular product"
+            width={400}
+            height={432}
+            className="transition-all"
+          />
+        </div>
+      ))}
     </Slider>
   );
 };
 
 export default Carousel;
 
+function SampleNextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={classNames(
+        " !bg-light-green !bg-[url('/icon/right-arrow.svg')] !bg-no-repeat !bg-center !bg-[length:45%] !rounded-full !w-12 !h-12  hover:!bg-orange hover:!transition-all",
+        className
+      )}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={classNames(
+        "!bg-light-green !bg-[url('/icon/left-arrow.svg')] !bg-no-repeat !bg-center !bg-[length:45%] !rounded-full !w-12 !h-12 hover:!bg-orange hover:!transition-all",
+        className
+      )}
+      onClick={onClick}
+    />
+  );
+}
+
 const settings = {
   dots: false,
-  //   infinite: false,
   speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 3,
+  slidesToScroll: 1,
   initialSlide: 0,
   arrows: true,
   nextArrow: <SampleNextArrow />,
@@ -66,29 +88,3 @@ const settings = {
     },
   ],
 };
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={classNames(
-        "!bg-light-green !bg-[url('/icon/right-arrow.svg')] !bg-no-repeat !bg-center !bg-[length:45%] !rounded-full !w-12 !h-12  hover:!bg-orange hover:!transition-all",
-        className
-      )}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={classNames(
-        "!bg-light-green !bg-[url('/icon/left-arrow.svg')] !bg-no-repeat !bg-center !bg-[length:45%] !rounded-full !w-12 !h-12 hover:!bg-orange hover:!transition-all",
-        className
-      )}
-      onClick={onClick}
-    />
-  );
-}

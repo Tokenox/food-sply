@@ -1,10 +1,11 @@
+'use client';
 import FeatureCard from "@/common/FeatureCard";
 import { FeatureData } from "@/utils/constants";
 import React from "react";
 
 const Features = () => {
   return (
-    <div className="section-padding-x">
+    <div className="section-margin-x">
       <h2 className="text-green text-[32px] font-bold uppercase leading-[120%] underline text-center">
         Discover the key features
       </h2>

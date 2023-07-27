@@ -1,9 +1,10 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 
 const ServiceProvide = () => {
   return (
-    <div className="section-padding flex justify-between items-center gap-4">
+    <div className="section-margin flex justify-between items-center gap-4">
       {/* First col */}
       <div className="w-[550px]">
         <h1 className="uppercase text-green text-5xl font-bold mb-7">Services we provide</h1>

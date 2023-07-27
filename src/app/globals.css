@@ -21,18 +21,23 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-.section-padding {
+.section-margin {
   margin: 100px 105px;
 }
 
-.section-padding-x {
+.section-margin-x {
   margin-left: 105px;
   margin-right: 105px;
 }
 
-.section-padding-y {
+.section-margin-y {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.transition-all:hover {
+  transition: var(--linear-transition-all);
+  transform: var(--transform-scale);
 }
 
 .navbar-hover-effect:hover {
@@ -120,4 +125,13 @@ body {
 .feature-card:hover .feature-blob {
   display: block;
   overflow: hidden;
+}
+
+/* //! slider buttons */
+
+.slick-next::before {
+  display: none;
+}
+.slick-prev::before {
+  display: none;
 }

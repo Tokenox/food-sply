@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Button from "../common/Button";
@@ -37,7 +36,7 @@ const Header = () => {
   return (
     <div className="h-screen bg-[url('/svg/header-bg.svg')] bg-no-repeat bg-cover bg-center pt-4">
       <Navbar />
-      <div className="section-padding-x flex justify-between items-center h-[75%]">
+      <div className="section-margin-x flex justify-between items-center h-[75%]">
         {/* First Col */}
         <div className="flex flex-col gap-[38px]">
           <div>
@@ -114,7 +113,7 @@ const Header = () => {
         </div>
       </div>
       {/* Header Bottom */}
-      <div className="section-padding-x text-white flex flex-col items-center">
+      <div className="section-margin-x text-white flex flex-col items-center">
         <div className="w-[600px] text-center">
           <p className="pb-5">
             We are feeding the world, by providing a frictionless food supply chain marketplace that

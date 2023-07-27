@@ -21,6 +21,8 @@ module.exports = {
         dark: "#ffffff1a",
         silver: "##C2C2C2",
         green: "#326542",
+        orange: "#F7941D",
+        "light-green": "#39B54A",
         "text-grey": "#A0A0A0",
         "text-dark": "#0A0A0A",
       },

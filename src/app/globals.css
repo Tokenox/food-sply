@@ -138,9 +138,13 @@ body {
 
 /*  //! Roadmap  */
 
-.roadmap-box {
+.roadmap-box-left {
   position: absolute;
   transform: translate(31px, 21px);
+}
+.roadmap-box-right {
+  position: absolute;
+  transform: translate(48px, 21px);
 }
 .roadmap-description b {
   color: #f7941d;
@@ -149,4 +153,24 @@ body {
 .roadmap-description span {
   color: #2d7e33;
   font-weight: 400;
+}
+.roadmap-circle-1 {
+  position: absolute;
+  transform: translate(-47%, -1%);
+}
+.roadmap-circle-2 {
+  position: absolute;
+  transform: translate(-47%, 200px);
+}
+.roadmap-circle-3 {
+  position: absolute;
+  transform: translate(-47%, 410px);
+}
+.roadmap-circle-4 {
+  position: absolute;
+  transform: translate(-47%, 620px);
+}
+.roadmap-circle-5 {
+  position: absolute;
+  transform: translate(-47%, 830px);
 }

@@ -1,6 +1,7 @@
 import Features from "@/components/Features";
 import Header from "@/components/Header";
 import OurProducts from "@/components/OurProducts";
+import Roadmap from "@/components/Roadmap";
 import ServiceProvide from "@/components/ServiceProvide";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <ServiceProvide />
       <Features />
       <OurProducts />
+      <Roadmap />
     </main>
   );
 }

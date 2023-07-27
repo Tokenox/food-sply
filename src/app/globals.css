@@ -127,11 +127,26 @@ body {
   overflow: hidden;
 }
 
-/* //! slider buttons */
+/* //! Slider buttons */
 
 .slick-next::before {
   display: none;
 }
 .slick-prev::before {
   display: none;
+}
+
+/*  //! Roadmap  */
+
+.roadmap-box {
+  position: absolute;
+  transform: translate(31px, 21px);
+}
+.roadmap-description b {
+  color: #f7941d;
+  font-weight: 400;
+}
+.roadmap-description span {
+  color: #2d7e33;
+  font-weight: 400;
 }

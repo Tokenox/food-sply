@@ -21,6 +21,7 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+/* //! Section margin */
 .section-margin {
   margin: 100px 105px;
 }
@@ -35,11 +36,18 @@ body {
   margin-bottom: 100px;
 }
 
+/* //! Transitions */
+
 .transition-all:hover {
   transition: var(--linear-transition-all);
   transform: var(--transform-scale);
 }
+.link:hover {
+  transition: var(--linear-transition-all);
+  transform: var(--transform-scale);
+}
 
+/* //! Navbar */
 .navbar-hover-effect:hover {
   color: #39b54a;
   font-weight: 700;
@@ -49,6 +57,7 @@ body {
   transform: var(--transform-scale);
 }
 
+/* //! Button with gradient border */
 .button-border {
   position: relative;
   color: #fff;
@@ -70,15 +79,20 @@ body {
   pointer-events: none;
 }
 
-.link:hover {
+/*  Filled button */
+.button-filled {
+  background: linear-gradient(180deg, #87ff98 0%, #f7941d 83.33%);
+}
+
+.button-filled:hover {
   transition: var(--linear-transition-all);
   transform: var(--transform-scale);
 }
 
+/* //! Header styles */
 .text-shadow {
   text-shadow: 0px 0px 20px #ff9700;
 }
-
 .custom-border {
   position: relative;
   height: 100%;
@@ -96,24 +110,14 @@ body {
   mask-composite: exclude;
   pointer-events: none;
 }
-
 .box-filled {
   background: linear-gradient(180deg, #87ff98 0%, #f7941d 83.33%);
 }
-
-.button-filled {
-  background: linear-gradient(180deg, #87ff98 0%, #f7941d 83.33%);
-}
-
-.button-filled:hover {
-  transition: var(--linear-transition-all);
-  transform: var(--transform-scale);
-}
-
 .box-shadow {
   box-shadow: 0px 0px 10px 0px #c9c9c9;
 }
-/* //! Feature cars */
+
+/* //! Feature cards */
 .feature-card:hover {
   box-shadow: 0px 0px 10px 0px #c9c9c9;
   transition: var(--linear-transition-all);

@@ -142,3 +142,31 @@ export const Faqs = [
     slug: "panel6",
   },
 ];
+
+export const ClientData = [
+  {
+    id: 1,
+    image: "/svg/client/coin-gecko.svg",
+    width: 158,
+  },
+  {
+    id: 2,
+    image: "/svg/client/market-cap.svg",
+    width: 290,
+  },
+  {
+    id: 3,
+    image: "/svg/client/binance.svg",
+    width: 160,
+  },
+  {
+    id: 4,
+    image: "/svg/client/aws.svg",
+    width: 80,
+  },
+  {
+    id: 5,
+    image: "/svg/client/mongo-db.svg",
+    width: 186,
+  },
+];

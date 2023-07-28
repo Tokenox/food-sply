@@ -27,6 +27,7 @@ module.exports = {
         "text-grey": "#A0A0A0",
         "text-dark": "#0A0A0A",
         "bg-color": "#FFFAF4",
+        "bg-dark": "#25363D",
       },
     },
   },

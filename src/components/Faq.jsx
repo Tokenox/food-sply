@@ -8,7 +8,7 @@ import Image from "next/image";
 const Faq = () => {
   return (
     <div className="bg-bg-color relative">
-      <div className="section-margin py-[148px]">
+      <div className="section-margin-x mt-[105px] py-[148px]">
         <div className="mb-14">
           <h1 className="text-4xl tracking-[-0.72px] font-bold leading-[44px] text-center">
             Frequently asked questions

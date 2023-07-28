@@ -77,7 +77,7 @@ export default Roadmap;
 
 const CardLeft = ({ title, description, slug }) => {
   return (
-    <div className="h-[312px] mb-[105px]">
+    <div className="h-[312px] mb-[105px] last:mb-0">
       <div
         className={classNames("bg-no-repeat w-[460px] h-[110px] relative", {
           ['bg-[url("/svg/roadmap/prototype.svg")]']: slug === "prototype",

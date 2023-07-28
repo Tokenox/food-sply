@@ -170,3 +170,26 @@ export const ClientData = [
     width: 186,
   },
 ];
+
+export const FooterLinks = [
+  {
+    id: 1,
+    title: "About",
+  },
+  {
+    id: 2,
+    title: "Services",
+  },
+  {
+    id: 3,
+    title: "FAQ",
+  },
+  {
+    id: 4,
+    title: "Featured Products",
+  },
+  {
+    id: 5,
+    title: "Privacy Policy",
+  },
+];

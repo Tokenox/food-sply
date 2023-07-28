@@ -21,6 +21,17 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.line {
+  background: radial-gradient(
+    63554524.58% 26749.62% at 60.03% -19649.01%,
+    #f7941d 0%,
+    rgba(45, 126, 51, 0) 100%
+  );
+  width: 100%;
+  height: 1px;
+  background-repeat: no-repeat;
+}
+
 /* //! Section margin */
 .section-margin {
   margin: 100px 105px;

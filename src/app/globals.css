@@ -151,6 +151,12 @@ body {
   display: none;
 }
 
+/* //! Product E-commerce */
+.product-card {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff00 0%, #f7941d 720%);
+}
+
 /*  //! Roadmap  */
 
 .roadmap-box-left {

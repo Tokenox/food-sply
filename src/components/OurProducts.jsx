@@ -1,6 +1,7 @@
 "use client";
 import Carousel from "@/common/Carousel";
-import { PopularProducts } from "@/utils/constants";
+import Product from "@/common/Product";
+import { PopularProducts, Products } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -26,6 +27,18 @@ const OurProducts = () => {
               height={320}
             />
           </div>
+        </div>
+        {/* Products E commerce */}
+        <div className="mt-[120px] flex gap-9 justify-between items-center">
+          {Products.map((product) => (
+            <Product
+              key={product.id}
+              title={product.title}
+              price={product.price}
+              description={product.description}
+              image={product.image}
+            />
+          ))}
         </div>
         {/* Popular Products */}
         <div>

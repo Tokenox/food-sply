@@ -193,3 +193,34 @@ export const FooterLinks = [
     title: "Privacy Policy",
   },
 ];
+
+export const Products = [
+  {
+    id: 1,
+    title: "Fresh Smoothie",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/svg/product/product1.svg",
+    price: "$10",
+  },
+  {
+    id: 2,
+    title: "Fresh Smoothie",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/svg/product/product1.svg",
+    price: "$10",
+  },
+  {
+    id: 3,
+    title: "Fresh Smoothie",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/svg/product/product1.svg",
+    price: "$10",
+  },
+  {
+    id: 4,
+    title: "Fresh Smoothie",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/svg/product/product1.svg",
+    price: "$10",
+  },
+];

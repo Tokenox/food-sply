@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   return (
-    <div className="h-screen bg-[url('/svg/header-bg.svg')] bg-no-repeat bg-cover bg-center pt-4 min-h-[900px]">
+    <div className="h-screen bg-[url('/svg/header-bg.svg')] bg-no-repeat bg-cover bg-center pt-4 min-h-[800px]">
       <Navbar />
       <div className="section-margin-x flex justify-between items-center h-[75%]">
         {/* First Col */}

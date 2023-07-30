@@ -57,18 +57,21 @@ const Team = () => {
                     alt="social media"
                     width={8}
                     height={15}
+                    className="cursor-pointer"
                   />
                   <Image
                     src={"/svg/social-icon/twitter.svg"}
                     alt="social media"
                     width={15}
                     height={15}
+                    className="cursor-pointer"
                   />
                   <Image
                     src={"/svg/social-icon/instagram.svg"}
                     alt="social media"
                     width={15}
                     height={15}
+                    className="cursor-pointer"
                   />
                 </div>
               </div>

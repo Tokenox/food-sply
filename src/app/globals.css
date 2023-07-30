@@ -214,6 +214,38 @@ body {
   transform: translate(-47%, 830px);
 }
 
+/* //! Tokenomics  */
+
+.airdrop-center {
+  background: linear-gradient(270deg, #de54ff 0%, #2b42f3 100.34%);
+}
+.team-center {
+  background: linear-gradient(90deg, #b6d329 0%, #6dbc25 100%);
+}
+.presale {
+  background: linear-gradient(270deg, #f9b545 0%, #fb5979 100.34%);
+}
+.liquidity-center {
+  background: linear-gradient(270deg, #5eb77a 0%, #feb42f 100.34%);
+}
+.presale-2 {
+  background: linear-gradient(270deg, #50aafd 0%, #aa80b8 52.57%, #fb5979 100.34%);
+}
+.dark-color {
+  background: linear-gradient(90deg, #272727 0%, #124b5e 100%);
+}
+.ellipse-middle {
+  clip-path: ellipse(70px 8px);
+  background: linear-gradient(90deg, #272727 0%, #124b5e 100%);
+}
+.airdrop-bottom-ellipse {
+  clip-path: ellipse(72px 16px);
+}
+.airdrop-light {
+  background: linear-gradient(180deg, #9dcb2780 -60%, #9ecb2800 100%);
+}
+
+
 /* //! Team styles */
 .flip-card {
   perspective: 1000px;

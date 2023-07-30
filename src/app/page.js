@@ -7,6 +7,7 @@ import OurProducts from "@/components/OurProducts";
 import Roadmap from "@/components/Roadmap";
 import ServiceProvide from "@/components/ServiceProvide";
 import Team from "@/components/Team";
+import Tokenomics from "@/components/Tokenomics";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Features />
       <OurProducts />
       <Roadmap />
+      <Tokenomics />
       <Team />
       <Faq />
       <Clients />

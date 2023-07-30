@@ -29,7 +29,7 @@ const OurProducts = () => {
           </div>
         </div>
         {/* Products E commerce */}
-        <div className="mt-[120px] flex gap-9 2xl:gap-12 justify-center items-center">
+        <div className="mt-[120px] mb-10 flex gap-9 2xl:gap-12 justify-center items-center">
           {Products.map((product) => (
             <Product
               key={product.id}

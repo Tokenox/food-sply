@@ -224,3 +224,28 @@ export const Products = [
     price: "$10",
   },
 ];
+
+export const TeamMembers = [
+  {
+    id: 1,
+    name: "Mario Mclaughlin",
+    slug: "mario-mclaughlin",
+    title: "Founder & C.E.O, Agriculture Research and Organization",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse",
+    facebookLink: "/",
+    twitterLink: "/",
+    instagramLink: "/",
+  },
+  {
+    id: 2,
+    name: "Sabina Zunguze",
+    slug: "sabina-zunguze",
+    title: "Founder & C.E.O, Agriculture Research and Organization",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse",
+    facebookLink: "/",
+    twitterLink: "/",
+    instagramLink: "/",
+  },
+];

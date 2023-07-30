@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import OurProducts from "@/components/OurProducts";
 import Roadmap from "@/components/Roadmap";
 import ServiceProvide from "@/components/ServiceProvide";
+import Team from "@/components/Team";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Features />
       <OurProducts />
       <Roadmap />
+      <Team />
       <Faq />
       <Clients />
       <Footer />

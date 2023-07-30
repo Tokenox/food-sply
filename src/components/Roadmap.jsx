@@ -115,7 +115,7 @@ const CardRight = ({ title, description, slug, className }) => {
         <p
           className={classNames("font-bold capitalize text-white text-center pt-5", {
             ["text-2xl"]: slug === "supply",
-            ["text-xl h-[52px] pt-6"]: slug === "initiation",
+            ["text-lg h-[52px] pt-6"]: slug === "initiation",
           })}
         >
           {title}

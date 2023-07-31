@@ -216,21 +216,6 @@ body {
 
 /* //! Tokenomics  */
 
-.airdrop-center {
-  background: linear-gradient(270deg, #2b42f3 0%, #de54ff 100.34%);
-}
-.team-center {
-  background: linear-gradient(90deg, #b6d329 0%, #6dbc25 100%);
-}
-.presale {
-  background: linear-gradient(270deg, #f9b545 0%, #fb5979 100.34%);
-}
-.liquidity-center {
-  background: linear-gradient(270deg, #5eb77a 0%, #feb42f 100.34%);
-}
-.presale-2 {
-  background: linear-gradient(270deg, #50aafd 0%, #aa80b8 52.57%, #fb5979 100.34%);
-}
 .dark-color {
   background: linear-gradient(90deg, #272727 0%, #124b5e 100%);
 }
@@ -241,19 +226,10 @@ body {
 .airdrop-bottom-ellipse {
   clip-path: ellipse(72px 16px);
 }
-.airdrop-light {
-  background: linear-gradient(180deg, rgba(113, 73, 248, 0.5) 0%, rgba(194, 81, 253, 0) 100%);
-}
+
 .writing-mode {
   writing-mode: tb-rl;
   transform: rotate(-180deg);
-}
-/* text */
-.airdrop-text {
-  background: linear-gradient(270deg, #2b42f3 0%, #de54ff 100.34%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* //! Team styles */

@@ -249,3 +249,57 @@ export const TeamMembers = [
     instagramLink: "/",
   },
 ];
+
+export const GraphData = [
+  {
+    id: 1,
+    title: "Airdrop",
+    slug: "airdrop",
+    percentage: "1",
+    revenue: "50,000,000,000",
+    hight: "160px",
+    background: "linear-gradient(270deg, #2b42f3 0%, #de54ff 100.34%)",
+    backgroundLight: "linear-gradient(180deg, #7149f880 0%, #c251fd00 100%)",
+  },
+  {
+    id: 2,
+    title: "Team",
+    slug: "team",
+    percentage: "6",
+    revenue: "600,000,000",
+    hight: "210px",
+    background: " linear-gradient(90deg, #6dbc25 0%, #b6d329 100%)",
+    backgroundLight:
+      "linear-gradient(180deg, rgba(157, 203, 39, 0.50) 0%, rgba(158, 203, 40, 0.00) 100%)",
+  },
+  {
+    id: 3,
+    title: "Pre Sale",
+    slug: "pre-sale",
+    percentage: "60",
+    revenue: "1,000,000,000",
+    hight: "330px",
+    background: "linear-gradient(270deg, #fb5979 0%, #f9b545 100.34%)",
+    backgroundLight: "linear-gradient(180deg, #fa806380 0%, #fa746a00 100%)",
+  },
+  {
+    id: 4,
+    title: "Liquidity",
+    slug: "liquidity",
+    percentage: "31",
+    revenue: "174,500,000,000",
+    hight: "280px",
+    background: "linear-gradient(270deg, #feb42f 0%, #5eb77a 100.34%)",
+    backgroundLight: "linear-gradient(180deg, #e6b43a80 0%, #74b67000 100%)",
+  },
+  {
+    id: 5,
+    title: "Presale",
+    slug: "presale",
+    percentage: "60",
+    revenue: "1,750,000,000,000",
+    hight: "330px",
+    background: "linear-gradient(270deg, #fb5979 0%, #aa80b8 52.57%, #50aafd 100.34%)",
+    backgroundLight: "linear-gradient(180deg, #ed84ff80 0%, #fa746a00 100%)",
+  },
+];

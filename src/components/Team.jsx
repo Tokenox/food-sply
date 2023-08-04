@@ -24,7 +24,7 @@ const Team = () => {
   };
 
   return (
-    <div className="mt-[130px] section-margin-x">
+    <div className="hidden lg:block mt-[130px] section-margin-x">
       <h2 className="text-4xl font-bold text-green mb-[80px] text-center uppercase">
         Meet Our team
       </h2>

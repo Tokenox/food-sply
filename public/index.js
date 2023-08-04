@@ -144,4 +144,22 @@ const PresaleIcon2 = () => {
   );
 };
 
-export { MinusIcon, PlusIcon, AirdropIcon, LiquidityIcon, PresaleIcon, PresaleIcon2 };
+const HamburgerIcon = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="23" viewBox="0 0 34 23" fill="none">
+      <rect x="0.875" y="0.75" width="32.25" height="3.58333" rx="1.79167" fill="#39B54A" />
+      <rect x="0.875" y="9.70825" width="32.25" height="3.58333" rx="1.79167" fill="#F7941D" />
+      <rect x="0.875" y="18.6667" width="32.25" height="3.58333" rx="1.79167" fill="#39B54A" />
+    </svg>
+  );
+};
+
+export {
+  MinusIcon,
+  PlusIcon,
+  AirdropIcon,
+  LiquidityIcon,
+  PresaleIcon,
+  PresaleIcon2,
+  HamburgerIcon,
+};

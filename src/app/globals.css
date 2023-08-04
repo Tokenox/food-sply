@@ -64,6 +64,11 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+/* small */
+.section-margin-x {
+  margin-left: 16px;
+  margin-right: 16px;
+}
 
 /* //! Transitions */
 
@@ -226,7 +231,6 @@ body {
 .airdrop-bottom-ellipse {
   clip-path: ellipse(72px 16px);
 }
-
 .writing-mode {
   writing-mode: tb-rl;
   transform: rotate(-180deg);

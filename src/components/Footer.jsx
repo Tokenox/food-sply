@@ -5,7 +5,7 @@ import Button from "@/common/Button";
 
 const Footer = () => {
   return (
-    <div className="section-margin-x my-14">
+    <div className="hidden lg:block section-margin-x my-14">
       <div className="grid grid-cols-2 gap-10 justify-between">
         {/* First col */}
         <div className="w-[80%]">

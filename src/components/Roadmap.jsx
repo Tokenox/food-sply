@@ -3,7 +3,7 @@ import React from "react";
 
 const Roadmap = () => {
   return (
-    <div className="section-margin-x">
+    <div className="hidden lg:block section-margin-x">
       <div className="flex flex-col items-center w-full mb-[120px]">
         <h1 className="uppercase text-green text-5xl font-bold mb-7 text-center">
           Roadmaps Launch Timeline

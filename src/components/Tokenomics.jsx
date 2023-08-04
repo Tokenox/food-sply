@@ -5,7 +5,7 @@ import { AirdropIcon } from "../../public";
 
 const Tokenomics = () => {
   return (
-    <div className="bg-bg-dark">
+    <div className="hidden lg:block bg-bg-dark">
       <div className="section-margin py-[100px]">
         <h2 className="capitalize text-5xl font-bold text-white mb-4">Tokenomics</h2>
         <p className="capitalize text-xl leading-6 text-white w-[620px]">

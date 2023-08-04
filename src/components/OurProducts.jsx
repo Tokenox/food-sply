@@ -7,7 +7,7 @@ import React from "react";
 
 const OurProducts = () => {
   return (
-    <div className="bg-[#f7941d0d]">
+    <div className="hidden lg:block bg-[#f7941d0d]">
       <div className="section-margin py-10">
         <div className=" flex justify-between items-center gap-4">
           {/* First col */}

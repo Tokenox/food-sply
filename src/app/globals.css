@@ -293,10 +293,3 @@ body {
   transform: rotateY(180deg);
   z-index: 1;
 }
-
-.slick-current .slick-center {
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-  background-color: red !important;
-  padding: 1rem !important;
-}

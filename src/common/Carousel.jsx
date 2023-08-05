@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Carousel = ({ data }) => {
   return (
-    <Slider {...settings} className="px-20">
+    <Slider {...settings} className="mx-20">
       {data?.map((item) => (
         <div key={item.id} className={classNames(" px-2 !flex justify-center lg:h-[520px]", {})}>
           <Image

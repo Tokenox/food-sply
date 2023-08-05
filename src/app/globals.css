@@ -68,11 +68,12 @@ body {
   margin-bottom: 100px;
 }
 /* small */
-.section-margin-x {
-  margin-left: 16px;
-  margin-right: 16px;
-}
+
 @media (max-width: 767px) {
+  .section-margin-x {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
   .section-margin {
     margin: 24px 16px;
   }

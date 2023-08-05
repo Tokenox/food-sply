@@ -8,12 +8,13 @@ const CarouselSm = ({ data }) => {
     className: "center",
     centerMode: true,
     infinite: true,
-      centerPadding: "80px",
+    centerPadding: "80px",
     slidesToShow: 1,
     speed: 1000,
+    arrows: false,
   };
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className="carousel-sm">
       {data?.map((item) => (
         <div key={item.id} className={""}>
           <Image src={item.image} alt="Popular product" width={300} height={432} />

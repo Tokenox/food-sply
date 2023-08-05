@@ -72,6 +72,11 @@ body {
   margin-left: 16px;
   margin-right: 16px;
 }
+@media (max-width: 767px) {
+  .section-margin {
+    margin: 24px 16px;
+  }
+}
 
 /* //! Transitions */
 

@@ -24,15 +24,19 @@ const Team = () => {
   };
 
   return (
-    <div className="hidden lg:block mt-[130px] section-margin-x">
-      <h2 className="text-4xl font-bold text-green mb-[80px] text-center uppercase">
+    <div className="mt-10 lg:mt-[130px] section-margin-x">
+      <h2 className="text-3xl font-bold text-green mb-5 lg:mb-[80px] text-center uppercase">
         Meet Our team
       </h2>
 
-      <div className="flex justify-center items-center gap-14">
+      <div className="flex justify-start md:justify-center items-center gap-4 lg:gap-14 overflow-x-scroll">
         {TeamMembers?.map((item) => (
           <div
             key={item.id}
+            style={{
+            // add flex to fix the card width
+              flex: "0 0 auto",
+            }}
             className="custom-light flip-card w-[290px] h-[436px] rounded-md"
             onMouseEnter={(e) => handleCardFlip(e, item.id)}
             onMouseLeave={(e) => handleCardFlip(e)}

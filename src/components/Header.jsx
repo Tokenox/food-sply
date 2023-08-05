@@ -125,8 +125,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* // Small screens */}
-      <div className="bg-[url('/svg/bg-header-sm.svg')] w-full bg-cover h-screen min-h-[1100px] bg-no-repeat lg:hidden">
+      {/* //! Small screens */}
+      <div className="bg-[url('/svg/bg-header-sm.svg')] w-full bg-cover h-screen min-h-[1150px] bg-no-repeat lg:hidden">
         <div className="section-margin-x">
           <div className="py-4 flex justify-between items-center">
             <Image src={"/logo-sm.svg"} alt="Food sply" width={132} height={48} />

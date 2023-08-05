@@ -33,11 +33,11 @@ const FeatureCard = ({ title, slug, description, width }) => {
       <div className="h-[225px] flex items-center justify-center">
         <Image src={images[slug]} alt={title} width={width || 190} height={145} />
       </div>
-      <div className="h-[48%]">
-        <h3 className="text-[32px] font-bold leading-[120%] uppercase mb-8">{title}</h3>
-        <p className="leading-[150%]">{description}</p>
+      <div className="lg:h-[48%]">
+        <h3 className="text-3xl lg:text-[32px] font-bold leading-[120%] uppercase mb-4 lg:mb-8">{title}</h3>
+        <p className="feature-description leading-[150%]">{description}</p>
       </div>
-      <Button className="link underline underline-offset-8 font-bold">Lean More</Button>
+      <Button className="feature-button link underline underline-offset-8 font-bold">Lean More</Button>
     </div>
   );
 };

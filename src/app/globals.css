@@ -173,6 +173,23 @@ body {
   display: block;
   overflow: hidden;
 }
+/* small screen */
+@media (max-width: 767px) {
+  .feature-card {
+  }
+  .feature-description {
+    display: none;
+  }
+  .feature-card:hover .feature-description {
+    display: block;
+  }
+  .feature-button {
+    display: none;
+  }
+  .feature-card:hover .feature-button {
+    display: block;
+  }
+}
 
 /* //! Slider buttons */
 

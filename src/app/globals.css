@@ -175,8 +175,6 @@ body {
 }
 /* small screen */
 @media (max-width: 767px) {
-  .feature-card {
-  }
   .feature-description {
     display: none;
   }

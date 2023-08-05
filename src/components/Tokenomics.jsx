@@ -5,16 +5,16 @@ import { AirdropIcon } from "../../public";
 
 const Tokenomics = () => {
   return (
-    <div className="hidden lg:block bg-bg-dark">
+    <div className="bg-bg-dark">
       <div className="section-margin py-[100px]">
         <h2 className="capitalize text-5xl font-bold text-white mb-4">Tokenomics</h2>
-        <p className="capitalize text-xl leading-6 text-white w-[620px]">
+        <p className="capitalize text-xl leading-6 text-white w-full md:w-[620px]">
           we believe that a well-defined roadmap is the key to achieving our vision and driving our
           organization towards success.{" "}
         </p>
-        <div className="mt-[100px] flex gap-10 h-[600px] items-end justify-around">
+        <div className="mt-0 lg:mt-[100px] flex gap-10 h-[550px] md:h-[600px] items-end justify-around">
           {GraphData?.map((item) => (
-            <div key={item.id} className=" w-[140px]">
+            <div key={item.id} className="w-9 md:w-[70px] lg:w-[140px]">
               <div
                 className={classNames("dark-color relative", {
                   "h-[125px]": item.percentage > 9,
@@ -29,7 +29,7 @@ const Tokenomics = () => {
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                     }}
-                    className="-rotate-90 text-4xl font-bold pr-5"
+                    className="-rotate-90 text-2xl md:text-4xl font-bold pr-5"
                   >
                     {item.percentage}%
                   </p>
@@ -64,7 +64,7 @@ const Tokenomics = () => {
                   className="w-full h-[31px] absolute bottom-[-15%]"
                 /> */}
               </div>
-              <div className="mt-12 text-white text-xl text-center">
+              <div className="hidden lg:block mt-12 text-white text-xl text-center">
                 <p>
                   {item.title} {item.percentage}%
                 </p>

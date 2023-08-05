@@ -132,11 +132,85 @@ const Header = () => {
             <Image src={"/logo-sm.svg"} alt="Food sply" width={132} height={48} />
             <HamburgerIcon />
           </div>
-          <div className="py-9">
+          <div className="py-4">
             <Image src={"/images/header-title-one.svg"} alt="Food sply" width={235} height={18} />
-            <h1 className="text-white font-bold text-5xl capitalize">
+            <h1 className="text-border text-white font-bold text-5xl capitalize mt-4 leading-tight">
               AgriTech Industry Nourishing a Sustainable Future
             </h1>
+            {/* Timer */}
+            <div className="custom-border backdrop-blur-[6px] px-6 pt-3 pb-5 mt-6">
+              <p className="font-bold text-white text-center mb-5">Time Left To Invest</p>
+              <div className="flex gap-4 items-baseline text-white">
+                <div className="flex flex-col items-center">
+                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                    {days}
+                  </div>
+                  <span className="mt-1">Days</span>
+                </div>
+                :
+                <div className="flex flex-col items-center">
+                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                    {hours}
+                  </div>
+                  <span className="mt-1">Hours</span>
+                </div>
+                :
+                <div className="flex flex-col items-center">
+                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                    {minutes}
+                  </div>
+                  <span className="mt-1">Min</span>
+                </div>
+                :
+                <div className="flex flex-col items-center">
+                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                    {seconds}
+                  </div>
+                  <span className="mt-1">Sec</span>
+                </div>
+              </div>
+            </div>
+            {/* Calculate */}
+            <div className="custom-border backdrop-blur-[6px] text-white py-6 px-5 mt-6">
+              <p className="text-[22px] font-bold text-center">Token Swap</p>
+              <div className="mb-4">
+                <p className="ml-4 mb-2.5">From</p>
+                <div className="bg-night flex justify-between items-center p-2 pr-6 rounded-full w-[324px]">
+                  <div className="rounded-full bg-dark py-3 px-5 flex gap-6">
+                    <div className="flex gap-2">
+                      <Image src={"/icon/eth-icon.svg"} alt="Ethereum" width={22} height={22} />
+                      <b>USDT</b>
+                    </div>
+                    <Image src={"/icon/down-arrow.svg"} alt="Arrow Down" width={13} height={22} />
+                  </div>
+                  <p className="text-text-grey text-sm">Balance: 430.00</p>
+                </div>
+              </div>
+              <div className="">
+                <p className="ml-4 mb-2.5">To</p>
+                <div className="bg-night flex justify-between items-center p-2 pr-6 rounded-full w-[324px]">
+                  <div className="rounded-full bg-dark py-3 px-5 flex gap-6">
+                    <div className="flex gap-2">
+                      <Image src={"/icon/eth-icon.svg"} alt="Ethereum" width={22} height={22} />
+                      <b>USDT</b>
+                    </div>
+                    <Image src={"/icon/down-arrow.svg"} alt="Arrow Down" width={13} height={22} />
+                  </div>
+                  <p className="text-text-grey text-sm">Balance: 430.00</p>
+                </div>
+              </div>
+              <div className="py-6">
+                <Divider />
+              </div>
+              <Button className="flex gap-4 justify-center items-center w-full" type={"fill"}>
+                <Image src={"/icon/swap-icon.svg"} alt="Swap" width={16} height={16} />
+                <span className="font-bold">Convert</span>
+              </Button>
+              <div className="flex justify-between items-center my-4 text-silver">
+                <p>Total</p>
+                <p>591.78 BUSD</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

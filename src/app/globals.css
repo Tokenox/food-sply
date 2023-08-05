@@ -31,6 +31,9 @@ body {
   height: 1px;
   background-repeat: no-repeat;
 }
+.text-border {
+  text-shadow: -1px 0 #f7941d, 0 1px #f7941d, 1px 0 #f7941d, 0 -1px #f7941d;
+}
 
 /* //! Gradient Border */
 .custom-light {

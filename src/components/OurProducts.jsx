@@ -8,7 +8,7 @@ import React from "react";
 
 const OurProducts = () => {
   return (
-    <div className="bg-[#f7941d0d]">
+    <div className="bg-[#f7941d0d] mb-6 lg:mb-[100px]">
       <div className="py-10">
         <div className="section-margin flex flex-col lg:flex-row justify-between items-center gap-4">
           {/* First col */}

@@ -243,6 +243,15 @@ body {
   transform: translate(-47%, 830px);
 }
 
+/* small style */
+@media (max-width: 767px){
+  .roadmap-box-left {
+    position: absolute;
+    transform: translate(24px, 16px);
+  }
+}
+
+
 /* //! Tokenomics  */
 
 .dark-color {

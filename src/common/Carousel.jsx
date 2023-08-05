@@ -9,8 +9,8 @@ import Image from "next/image";
 const Carousel = ({ data }) => {
   return (
     <Slider {...settings} className="px-20">
-      {data?.map((item, index) => (
-        <div key={item.id} className={classNames(" px-2 !flex justify-center h-[520px]", {})}>
+      {data?.map((item) => (
+        <div key={item.id} className={classNames(" px-2 !flex justify-center lg:h-[520px]", {})}>
           <Image
             src={item.image}
             alt="Popular product"

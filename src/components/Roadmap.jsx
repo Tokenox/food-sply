@@ -71,8 +71,8 @@ const Roadmap = () => {
           </div>
         </div>
       </div>
-      {/* Small screen */}
-      <div className="section-margin-x">
+      {/* //! Small screen */}
+      <div className="section-margin-x md:hidden">
         <div className="mb-6">
           <h1 className="uppercase text-green text-[32px] font-bold text-center leading-[40px] mb-5">
             Roadmaps Launch Timeline
@@ -82,11 +82,34 @@ const Roadmap = () => {
             our organization towards success.
           </p>
         </div>
-        <div className="">
+        <div className="relative">
+          <div className="roadmap-bar-sm bg-[#E6E6E6] w-3 h-[1100px] absolute"></div>
           <CardLeft
             title={"Prototype Completion"}
             slug={"prototype"}
             description={`Crafting a comprehensive prototype within a span of <b> 4-6 months </b> to visualize our offering.`}
+          />
+          <CardRight
+            title={"Agriculture Supply Chain Building"}
+            slug={"supply"}
+            description={`Initiating the construction of a decentralized supply chain for agriculture in the next <b> 3-6 months. </b>`}
+            className={""}
+          />
+          <CardLeft
+            title={"Food Accelerator Development"}
+            slug={"accelerator"}
+            description={`Committing <span> 4-8 months </span> to develop a Food Accelerator for rapid advancement in the field.`}
+          />
+          <CardRight
+            title={"Community-Based Agriculture Program Initiation"}
+            slug={"initiation"}
+            description={`Fostering local engagement by starting a community-based agriculture program.`}
+            className={""}
+          />
+          <CardLeft
+            title={"Financial Product Development"}
+            slug={"financial"}
+            description={`Dedicating <b> 6 months </b> to devise innovative financial products to support our stakeholders.`}
           />
         </div>
       </div>
@@ -98,7 +121,7 @@ export default Roadmap;
 
 const CardLeft = ({ title, description, slug }) => {
   return (
-    <div className="h-[312px] mb-[105px] last:mb-0">
+    <div className="h-[312px] mb-0 md:mb-[105px] last:mb-0">
       <div
         className={classNames("bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative", {
           ['bg-[url("/svg/roadmap/prototype.svg")]']: slug === "prototype",
@@ -106,8 +129,10 @@ const CardLeft = ({ title, description, slug }) => {
           ['bg-[url("/svg/roadmap/financial.svg")]']: slug === "financial",
         })}
       >
-        <p className="text-xl md:text-2xl font-bold capitalize text-white text-center pt-3 md:pt-5">{title}</p>
-        <div className="roadmap-box-left bg-[#F2F2F2] w-[280px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
+        <p className="text-lg md:text-2xl font-bold capitalize text-white text-center pt-4 md:pt-5">
+          {title}
+        </p>
+        <div className="roadmap-box-left bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
           <p
             dangerouslySetInnerHTML={{ __html: description }}
             className={classNames(
@@ -128,24 +153,24 @@ const CardRight = ({ title, description, slug, className }) => {
       })}
     >
       <div
-        className={classNames("bg-no-repeat w-[460px] h-[110px] relative", {
+        className={classNames("bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative", {
           ["bg-[url('/svg/roadmap/supply.svg')]"]: slug === "supply",
           ['bg-[url("/svg/roadmap/initiation.svg")]']: slug === "initiation",
         })}
       >
         <p
-          className={classNames("font-bold capitalize text-white text-center pt-5", {
-            ["text-2xl"]: slug === "supply",
-            ["text-lg h-[52px] pt-6"]: slug === "initiation",
+          className={classNames("font-bold capitalize text-white text-center pt-4 md:pt-5", {
+            ["text-lg md:text-2xl"]: slug === "supply",
+            ["initiation-text text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]: slug === "initiation",
           })}
         >
           {title}
         </p>
-        <div className="roadmap-box-right bg-[#F2F2F2] w-[380px] h-[236px] flex justify-center items-center">
+        <div className="roadmap-box-right bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
           <p
             dangerouslySetInnerHTML={{ __html: description }}
             className={classNames(
-              "roadmap-description text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
+              "roadmap-description px-3 md:px-0 text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
             )}
           />
         </div>

@@ -71,11 +71,11 @@ body {
 
 @media (max-width: 767px) {
   .section-margin-x {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .section-margin {
-    margin: 24px 16px;
+    margin: 24px 20px;
   }
 }
 

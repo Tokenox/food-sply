@@ -7,19 +7,19 @@ import React from "react";
 
 const OurProducts = () => {
   return (
-    <div className="hidden lg:block bg-[#f7941d0d]">
+    <div className="bg-[#f7941d0d]">
       <div className="section-margin py-10">
-        <div className=" flex justify-between items-center gap-4">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
           {/* First col */}
-          <div className="w-[550px]">
-            <h1 className="uppercase text-green text-5xl font-bold mb-7">Services we provide</h1>
-            <p className="text-xl leading-[150%] ">
+          <div className="mb-6 lg:mb-0 lg:w-[550px]">
+            <h1 className="uppercase text-green text-3xl lg:text-5xl font-bold mb-4 text-center lg:text-left lg:mb-7">Services we provide</h1>
+            <p className="lg:text-xl leading-[150%] text-text-dark text-center lg:text-left">
               Agriculture is one of the largest industries in the world. Currently its going threw a
               revolution, let us help you navigate the new world.{" "}
             </p>
           </div>
           {/* Second col */}
-          <div className="w-[50%] flex justify-end">
+          <div className="lg:w-[50%] flex justify-end">
             <Image
               src={"/svg/our-products.svg"}
               alt="Food sply services provides"
@@ -29,7 +29,7 @@ const OurProducts = () => {
           </div>
         </div>
         {/* Products E commerce */}
-        <div className="mt-[120px] mb-10 flex gap-9 2xl:gap-12 justify-center items-center">
+        <div className="overflow-x-scroll justify-start mt-16 lg:mt-[120px] h-[470px] lg:h-auto px-6 lg:px-0 mb-10 flex gap-9 2xl:gap-12 lg:justify-center items-center">
           {Products.map((product) => (
             <Product
               key={product.id}

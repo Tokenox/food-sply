@@ -4,8 +4,8 @@ import { ClientData } from "@/utils/constants";
 
 const Clients = () => {
   return (
-    <div className="hidden lg:block bg-bg-dark">
-      <div className="section-margin-x py-[70px] flex gap-6 2xl:gap-[75px] items-center justify-between ">
+    <div className="bg-bg-dark">
+      <div className="section-margin-x py-[40px] flex gap-6 2xl:gap-[75px] items-center justify-between overflow-x-scroll ">
         {ClientData?.map((item) => (
           <Image
             key={item.id}

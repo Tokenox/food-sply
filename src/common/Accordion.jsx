@@ -30,6 +30,11 @@ export default function CustomAccordion({ data }) {
             "&:before": {
               backgroundColor: "#F7941D",
             },
+            // small devices
+            "@media (max-width: 768px)": {
+              width: "100%",
+              padding: "6px 0",
+            },
           }}
         >
           <AccordionSummary
@@ -46,6 +51,9 @@ export default function CustomAccordion({ data }) {
                 color: "#101828",
                 fontSize: "20px",
                 fontWeight: "700",
+                "@media (max-width: 768px)": {
+                  fontSize: "14px",
+                }
               }}
             >
               {item.question}
@@ -57,6 +65,9 @@ export default function CustomAccordion({ data }) {
                 fontSize: "16px",
                 color: "#667085",
                 width: "90%",
+                "@media (max-width: 768px)": {
+                  fontSize: "12px",
+                }
               }}
             >
               {item.answer}

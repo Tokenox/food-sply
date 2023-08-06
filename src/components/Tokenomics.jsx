@@ -12,16 +12,14 @@ const Tokenomics = () => {
       <div className="section-margin py-[100px]">
         <Slide triggerOnce direction="left">
           <Fade triggerOnce delay={400}>
-            <h2 className="capitalize text-5xl font-bold text-white mb-4">
-              Tokenomics
-            </h2>
+            <h2 className="capitalize text-5xl font-bold text-white mb-4">Tokenomics</h2>
           </Fade>
         </Slide>
         <Slide triggerOnce direction="left">
           <Fade triggerOnce delay={400}>
             <p className="capitalize text-xl leading-6 text-white w-full md:w-[620px]">
-              we believe that a well-defined roadmap is the key to achieving our
-              vision and driving our organization towards success.{" "}
+              we believe that a well-defined roadmap is the key to achieving our vision and driving
+              our organization towards success.{" "}
             </p>
           </Fade>
         </Slide>
@@ -71,9 +69,7 @@ const Tokenomics = () => {
                   >
                     <div className="flex justify-between items-end h-full pb-7 px-2">
                       <div className="flex justify-between w-full items-center">
-                        <p className="writing-mode font-xl font-bold text-white">
-                          {item.title}
-                        </p>
+                        <p className="writing-mode font-xl font-bold text-white">{item.title}</p>
                         <AirdropIcon />
                       </div>
                     </div>
@@ -82,7 +78,7 @@ const Tokenomics = () => {
                       style={{
                         background: item.background,
                       }}
-                      className="airdrop-bottom-ellipse w-full h-[32px] absolute bottom-[-13px] z-[1]"
+                      className=" w-full h-[32px] rounded-[60%] absolute bottom-[-15px] z-[1]"
                     />
                     {/* //! need to fix it that's way commented */}
                     {/* <div

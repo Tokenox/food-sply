@@ -4,7 +4,7 @@ import Image from "next/image";
 import { TeamMembers } from "@/utils/constants";
 import marioImage from "../../public/images/team/Mario-Mclaughlin.jpg";
 import sabinaImage from "../../public/images/team/Sabina-Zunguze.jpg";
-import { Bounce, Zoom } from "react-awesome-reveal";
+import { Bounce, Fade, Slide, Zoom } from "react-awesome-reveal";
 
 const Team = () => {
   const [isActive, setIsActive] = useState(0);
@@ -26,13 +26,17 @@ const Team = () => {
 
   return (
     <div className="mt-10 lg:mt-[130px] section-margin-x">
-      <h2 className="text-3xl font-bold text-green mb-5 lg:mb-[80px] text-center uppercase">
-        Meet Our team
-      </h2>
+      <Slide triggerOnce direction="up">
+        <Fade triggerOnce delay={600}>
+          <h2 className="text-3xl font-bold text-green mb-5 lg:mb-[80px] text-center uppercase">
+            Meet Our team
+          </h2>
+        </Fade>
+      </Slide>
 
       <div className="flex justify-start md:justify-center items-center gap-4 lg:gap-14 overflow-x-scroll">
         {TeamMembers?.map((item) => (
-          <Zoom>
+          <Zoom triggerOnce>
             <div
               key={item.id}
               style={{

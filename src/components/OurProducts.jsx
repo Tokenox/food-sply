@@ -66,7 +66,7 @@ const OurProducts = () => {
       {/* Popular Products */}
       <div>
         <Slide triggerOnce direction="up">
-          <Fade triggerOnce delay={400}>
+          <Fade triggerOnce delay={600}>
             <h2 className="text-green text-2xl lg:text-[32px] font-bold uppercase leading-[120%] underline text-center pt-10 lg:pt-[90px] lg:pb-[75px]">
               Most popular in list
             </h2>

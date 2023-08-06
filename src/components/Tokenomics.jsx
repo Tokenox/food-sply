@@ -7,26 +7,6 @@ import { Fade, Slide, Reveal } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
 const Tokenomics = () => {
-  const [currentHeight, setCurrentHeight] = React.useState(0);
-  const [animationEnabled, setAnimationEnabled] = React.useState(false);
-  console.log("animationEnabled", animationEnabled);
-  // increase current height by 1 each 100ms until it reaches 10 if animation is enabled
-  React.useEffect(() => {
-    let interval =
-      animationEnabled &&
-      currentHeight < 10 &&
-      setInterval(() => {
-        if (animationEnabled && currentHeight < 10) {
-          setCurrentHeight((prev) => prev + 1);
-        }
-      }, 200);
-
-    return () => interval && clearInterval(interval);
-  }, [animationEnabled, currentHeight]);
-  const intersectionHandler = (e) => {
-    !animationEnabled && e && setAnimationEnabled(true);
-  };
-  console.log("currentHeight", currentHeight);
   return (
     <div className="bg-bg-dark">
       <div className="section-margin py-[100px]">

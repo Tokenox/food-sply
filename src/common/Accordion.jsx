@@ -17,8 +17,8 @@ export default function CustomAccordion({ data }) {
 
   return (
     <div className="flex flex-col items-center">
-      {data?.map((item) => (
-        <Zoom triggerOnce>
+      {data?.map((item, i) => (
+        <Zoom triggerOnce key={i}>
           <Accordion
             key={item.id}
             expanded={expanded === item.slug}

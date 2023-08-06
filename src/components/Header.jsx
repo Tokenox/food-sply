@@ -58,7 +58,7 @@ const Header = () => {
                       <Fade
                         delay={1e3}
                         cascade
-                        damping={0.04}
+                        damping={0.025}
                         triggerOnce
                         className="text-border text-white font-bold text-[52px] capitalize mt-4 leading-tight w-[515px] !whitespace-break-spaces"
                       >

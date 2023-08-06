@@ -18,7 +18,7 @@ const Carousel = ({ data }) => {
     <Slider {...settings} className="mx-20">
       {data?.map((item, i) =>
         i == 1 ? (
-          <Reveal duration={2000} keyframes={customAnimation}>
+          <Reveal key={item.id} duration={2000} keyframes={customAnimation}>
             <div
               key={item.id}
               className={classNames(

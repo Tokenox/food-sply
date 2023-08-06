@@ -5,21 +5,54 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import classNames from "classnames";
 import Image from "next/image";
+import { keyframes } from "@emotion/react";
+import { Reveal } from "react-awesome-reveal";
+const customAnimation = keyframes`
+  0%   { transform: scale(1);}
+  60%  { transform: scale(1.15);}
+  100% { transform: scale(1);}
+`;
 
 const Carousel = ({ data }) => {
   return (
     <Slider {...settings} className="mx-20">
-      {data?.map((item) => (
-        <div key={item.id} className={classNames(" px-2 !flex justify-center lg:h-[520px]", {})}>
-          <Image
-            src={item.image}
-            alt="Popular product"
-            width={400}
-            height={432}
-            className="transition-all"
-          />
-        </div>
-      ))}
+      {data?.map((item, i) =>
+        i == 1 ? (
+          <Reveal duration={1000} keyframes={customAnimation}>
+            <div
+              key={item.id}
+              className={classNames(
+                " px-2 !flex justify-center lg:h-[520px]",
+                {}
+              )}
+            >
+              <Image
+                src={item.image}
+                alt="Popular product"
+                width={400}
+                height={432}
+                className="transition-all"
+              />
+            </div>
+          </Reveal>
+        ) : (
+          <div
+            key={item.id}
+            className={classNames(
+              " px-2 !flex justify-center lg:h-[520px]",
+              {}
+            )}
+          >
+            <Image
+              src={item.image}
+              alt="Popular product"
+              width={400}
+              height={432}
+              className="transition-all"
+            />
+          </div>
+        )
+      )}
     </Slider>
   );
 };

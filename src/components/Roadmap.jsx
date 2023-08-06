@@ -1,18 +1,28 @@
+"use client";
 import classNames from "classnames";
 import React from "react";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
 const Roadmap = () => {
   return (
     <div>
       <div className="hidden lg:block section-margin-x">
         <div className="flex flex-col items-center w-full mb-[120px]">
-          <h1 className="uppercase text-green text-5xl font-bold mb-7 text-center">
-            Roadmaps Launch Timeline
-          </h1>
-          <p className="text-text-grey text-xl capitalize text-center w-[640px]">
-            we believe that a well-defined roadmap is the key to achieving our vision and driving
-            our organization towards success.
-          </p>
+          <Slide triggerOnce direction="up">
+            <Fade triggerOnce delay={400}>
+              <h1 className="uppercase text-green text-5xl font-bold mb-7 text-center">
+                Roadmaps Launch Timeline
+              </h1>
+            </Fade>
+          </Slide>
+          <Slide triggerOnce direction="up">
+            <Fade triggerOnce delay={400}>
+              <p className="text-text-grey text-xl capitalize text-center w-[640px]">
+                we believe that a well-defined roadmap is the key to achieving
+                our vision and driving our organization towards success.
+              </p>
+            </Fade>
+          </Slide>
         </div>
         {/* //! Roadmap */}
         <div className="flex justify-center">
@@ -24,6 +34,7 @@ const Roadmap = () => {
                 slug={"prototype"}
                 description={`Crafting a comprehensive prototype within a span of <b> 4-6 months </b> to visualize our offering.`}
               />
+
               <CardLeft
                 title={"Food Accelerator Development"}
                 slug={"accelerator"}
@@ -78,8 +89,8 @@ const Roadmap = () => {
             Roadmaps Launch Timeline
           </h1>
           <p className="text-text-dark capitalize text-center">
-            we believe that a well-defined roadmap is the key to achieving our vision and driving
-            our organization towards success.
+            we believe that a well-defined roadmap is the key to achieving our
+            vision and driving our organization towards success.
           </p>
         </div>
         <div className="relative">
@@ -122,25 +133,35 @@ export default Roadmap;
 const CardLeft = ({ title, description, slug }) => {
   return (
     <div className="h-[312px] mb-0 md:mb-[105px] last:mb-0">
-      <div
-        className={classNames("bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative", {
-          ['bg-[url("/svg/roadmap/prototype.svg")]']: slug === "prototype",
-          ['bg-[url("/svg/roadmap/accelerator.svg")]']: slug === "accelerator",
-          ['bg-[url("/svg/roadmap/financial.svg")]']: slug === "financial",
-        })}
-      >
-        <p className="text-lg md:text-2xl font-bold capitalize text-white text-center pt-4 md:pt-5">
-          {title}
-        </p>
-        <div className="roadmap-box-left bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
-          <p
-            dangerouslySetInnerHTML={{ __html: description }}
+      <Slide triggerOnce direction="left">
+        <Fade triggerOnce delay={400}>
+          <div
             className={classNames(
-              "roadmap-description px-3 md:px-0 md:text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
+              "bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative",
+              {
+                ['bg-[url("/svg/roadmap/prototype.svg")]']:
+                  slug === "prototype",
+                ['bg-[url("/svg/roadmap/accelerator.svg")]']:
+                  slug === "accelerator",
+                ['bg-[url("/svg/roadmap/financial.svg")]']:
+                  slug === "financial",
+              }
             )}
-          />
-        </div>
-      </div>
+          >
+            <p className="text-lg md:text-2xl font-bold capitalize text-white text-center pt-4 md:pt-5">
+              {title}
+            </p>
+            <div className="roadmap-box-left bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
+              <p
+                dangerouslySetInnerHTML={{ __html: description }}
+                className={classNames(
+                  "roadmap-description px-3 md:px-0 md:text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
+                )}
+              />
+            </div>
+          </div>
+        </Fade>
+      </Slide>
     </div>
   );
 };
@@ -152,40 +173,56 @@ const CardRight = ({ title, description, slug, className }) => {
         [className]: className,
       })}
     >
-      <div
-        className={classNames("bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative", {
-          ["bg-[url('/svg/roadmap/supply.svg')]"]: slug === "supply",
-          ['bg-[url("/svg/roadmap/initiation.svg")]']: slug === "initiation",
-        })}
-      >
-        <p
-          className={classNames("font-bold capitalize text-white text-center pt-4 md:pt-5", {
-            ["text-lg md:text-2xl"]: slug === "supply",
-            ["initiation-text text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]: slug === "initiation",
-          })}
-        >
-          {title}
-        </p>
-        <div className="roadmap-box-right bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
-          <p
-            dangerouslySetInnerHTML={{ __html: description }}
+      <Slide triggerOnce direction="right">
+        <Fade triggerOnce delay={400}>
+          <div
             className={classNames(
-              "roadmap-description px-3 md:px-0 text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
+              "bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative",
+              {
+                ["bg-[url('/svg/roadmap/supply.svg')]"]: slug === "supply",
+                ['bg-[url("/svg/roadmap/initiation.svg")]']:
+                  slug === "initiation",
+              }
             )}
-          />
-        </div>
-      </div>
+          >
+            <p
+              className={classNames(
+                "font-bold capitalize text-white text-center pt-4 md:pt-5",
+                {
+                  ["text-lg md:text-2xl"]: slug === "supply",
+                  ["initiation-text text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]:
+                    slug === "initiation",
+                }
+              )}
+            >
+              {title}
+            </p>
+            <div className="roadmap-box-right bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
+              <p
+                dangerouslySetInnerHTML={{ __html: description }}
+                className={classNames(
+                  "roadmap-description px-3 md:px-0 text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
+                )}
+              />
+            </div>
+          </div>
+        </Fade>
+      </Slide>
     </div>
   );
 };
 
 const Circle = ({ color }) => {
   return (
-    <div
-      className={classNames("w-[50px] h-[50px] rounded-full flex justify-center items-center")}
-      style={{ backgroundColor: color }}
-    >
-      <div className="w-[32px] h-[32px] rounded-full bg-white" />
-    </div>
+    <Zoom triggerOnce>
+      <div
+        className={classNames(
+          "w-[50px] h-[50px] rounded-full flex justify-center items-center"
+        )}
+        style={{ backgroundColor: color }}
+      >
+        <div className="w-[32px] h-[32px] rounded-full bg-white" />
+      </div>
+    </Zoom>
   );
 };

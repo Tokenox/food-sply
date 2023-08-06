@@ -1,77 +1,129 @@
+"use client";
 import { GraphData } from "@/utils/constants";
 import classNames from "classnames";
 import React from "react";
 import { AirdropIcon } from "../../public";
+import { Fade, Slide, Reveal } from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
 
 const Tokenomics = () => {
+  const [currentHeight, setCurrentHeight] = React.useState(0);
+  const [animationEnabled, setAnimationEnabled] = React.useState(false);
+  console.log("animationEnabled", animationEnabled);
+  // increase current height by 1 each 100ms until it reaches 10 if animation is enabled
+  React.useEffect(() => {
+    let interval =
+      animationEnabled &&
+      currentHeight < 10 &&
+      setInterval(() => {
+        if (animationEnabled && currentHeight < 10) {
+          setCurrentHeight((prev) => prev + 1);
+        }
+      }, 200);
+
+    return () => interval && clearInterval(interval);
+  }, [animationEnabled, currentHeight]);
+  const intersectionHandler = (e) => {
+    !animationEnabled && e && setAnimationEnabled(true);
+  };
+  console.log("currentHeight", currentHeight);
   return (
     <div className="bg-bg-dark">
       <div className="section-margin py-[100px]">
-        <h2 className="capitalize text-5xl font-bold text-white mb-4">Tokenomics</h2>
-        <p className="capitalize text-xl leading-6 text-white w-full md:w-[620px]">
-          we believe that a well-defined roadmap is the key to achieving our vision and driving our
-          organization towards success.{" "}
-        </p>
+        <Slide triggerOnce direction="left">
+          <Fade triggerOnce delay={400}>
+            <h2 className="capitalize text-5xl font-bold text-white mb-4">
+              Tokenomics
+            </h2>
+          </Fade>
+        </Slide>
+        <Slide triggerOnce direction="left">
+          <Fade triggerOnce delay={400}>
+            <p className="capitalize text-xl leading-6 text-white w-full md:w-[620px]">
+              we believe that a well-defined roadmap is the key to achieving our
+              vision and driving our organization towards success.{" "}
+            </p>
+          </Fade>
+        </Slide>
         <div className="mt-0 lg:mt-[100px] flex gap-10 h-[550px] md:h-[600px] items-end justify-around">
-          {GraphData?.map((item) => (
-            <div key={item.id} className="w-9 md:w-[70px] lg:w-[140px]">
-              <div
-                className={classNames("dark-color relative", {
-                  "h-[125px]": item.percentage > 9,
-                  "h-[90px]": item.percentage < 10,
-                })}
-              >
-                <div className="flex justify-center items-center h-full">
-                  <p
+          {GraphData?.map((item) => {
+            const currentKeyframe = keyframes`
+              from {
+                height:80px;
+              }
+              to {
+                height: ${item.hight}px;
+              }
+            `;
+            return (
+              <div key={item.id} className="w-9 md:w-[70px] lg:w-[140px]">
+                <Fade triggerOnce>
+                  <div
+                    className={classNames("dark-color relative", {
+                      "h-[125px]": item.percentage > 9,
+                      "h-[90px]": item.percentage < 10,
+                    })}
+                  >
+                    <div className="flex justify-center items-center h-full">
+                      <p
+                        style={{
+                          background: item.background,
+                          backgroundClip: "text",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                        className="-rotate-90 text-2xl md:text-4xl font-bold pr-5"
+                      >
+                        {item.percentage}%
+                      </p>
+                    </div>
+                    <div className="dark-color w-full h-7 rounded-[50%] absolute top-[-15px] border border-[#899AA1]" />
+                  </div>
+                </Fade>
+
+                <Reveal triggerOnce duration={1500} keyframes={currentKeyframe}>
+                  <div
                     style={{
                       background: item.background,
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
+                      height: "100%",
                     }}
-                    className="-rotate-90 text-2xl md:text-4xl font-bold pr-5"
+                    className="w-full relative"
                   >
-                    {item.percentage}%
-                  </p>
-                </div>
-                <div className="dark-color w-full h-7 rounded-[50%] absolute top-[-15px] border border-[#899AA1]" />
-              </div>
-              <div
-                style={{
-                  background: item.background,
-                  height: item.hight,
-                }}
-                className="w-full relative"
-              >
-                <div className="flex justify-between items-end h-full pb-7 px-2">
-                  <div className="flex justify-between w-full items-center">
-                    <p className="writing-mode font-xl font-bold text-white">{item.title}</p>
-                    <AirdropIcon />
-                  </div>
-                </div>
-                <div className="ellipse-middle w-full h-[32px] absolute top-[-15px]" />
-                <div
-                  style={{
-                    background: item.background,
-                  }}
-                  className="airdrop-bottom-ellipse w-full h-[32px] absolute bottom-[-13px] z-[1]"
-                />
-                {/* //! need to fix it that's way commented */}
-                {/* <div
+                    <div className="flex justify-between items-end h-full pb-7 px-2">
+                      <div className="flex justify-between w-full items-center">
+                        <p className="writing-mode font-xl font-bold text-white">
+                          {item.title}
+                        </p>
+                        <AirdropIcon />
+                      </div>
+                    </div>
+                    <div className="ellipse-middle w-full h-[32px] absolute top-[-15px]" />
+                    <div
+                      style={{
+                        background: item.background,
+                      }}
+                      className="airdrop-bottom-ellipse w-full h-[32px] absolute bottom-[-13px] z-[1]"
+                    />
+                    {/* //! need to fix it that's way commented */}
+                    {/* <div
                   style={{
                     background: item.backgroundLight,
                   }}
                   className="w-full h-[31px] absolute bottom-[-15%]"
                 /> */}
+                  </div>
+                </Reveal>
+                <Fade delay={500} triggerOnce>
+                  <div className="hidden lg:block mt-12 text-white text-xl text-center">
+                    <p>
+                      {item.title} {item.percentage}%
+                    </p>
+                    <p>{item.revenue}$</p>
+                  </div>
+                </Fade>
               </div>
-              <div className="hidden lg:block mt-12 text-white text-xl text-center">
-                <p>
-                  {item.title} {item.percentage}%
-                </p>
-                <p>{item.revenue}$</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

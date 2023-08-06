@@ -198,28 +198,32 @@ export const Products = [
   {
     id: 1,
     title: "Fresh Smoothie",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     image: "/svg/product/product1.svg",
     price: "$10",
   },
   {
     id: 2,
     title: "Fresh Smoothie",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     image: "/svg/product/product1.svg",
     price: "$10",
   },
   {
     id: 3,
     title: "Fresh Smoothie",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     image: "/svg/product/product1.svg",
     price: "$10",
   },
   {
     id: 4,
     title: "Fresh Smoothie",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     image: "/svg/product/product1.svg",
     price: "$10",
   },
@@ -257,7 +261,7 @@ export const GraphData = [
     slug: "airdrop",
     percentage: "1",
     revenue: "50,000,000,000",
-    hight: "160px",
+    hight: 160,
     background: "linear-gradient(270deg, #2b42f3 0%, #de54ff 100.34%)",
     backgroundLight: "linear-gradient(180deg, #7149f880 0%, #c251fd00 100%)",
   },
@@ -267,7 +271,7 @@ export const GraphData = [
     slug: "team",
     percentage: "6",
     revenue: "600,000,000",
-    hight: "210px",
+    hight: 210,
     background: " linear-gradient(90deg, #6dbc25 0%, #b6d329 100%)",
     backgroundLight:
       "linear-gradient(180deg, rgba(157, 203, 39, 0.50) 0%, rgba(158, 203, 40, 0.00) 100%)",
@@ -278,7 +282,7 @@ export const GraphData = [
     slug: "pre-sale",
     percentage: "60",
     revenue: "1,000,000,000",
-    hight: "330px",
+    hight: 330,
     background: "linear-gradient(270deg, #fb5979 0%, #f9b545 100.34%)",
     backgroundLight: "linear-gradient(180deg, #fa806380 0%, #fa746a00 100%)",
   },
@@ -288,7 +292,7 @@ export const GraphData = [
     slug: "liquidity",
     percentage: "31",
     revenue: "174,500,000,000",
-    hight: "280px",
+    hight: 280,
     background: "linear-gradient(270deg, #feb42f 0%, #5eb77a 100.34%)",
     backgroundLight: "linear-gradient(180deg, #e6b43a80 0%, #74b67000 100%)",
   },
@@ -298,8 +302,9 @@ export const GraphData = [
     slug: "presale",
     percentage: "60",
     revenue: "1,750,000,000,000",
-    hight: "330px",
-    background: "linear-gradient(270deg, #fb5979 0%, #aa80b8 52.57%, #50aafd 100.34%)",
+    hight: 330,
+    background:
+      "linear-gradient(270deg, #fb5979 0%, #aa80b8 52.57%, #50aafd 100.34%)",
     backgroundLight: "linear-gradient(180deg, #ed84ff80 0%, #fa746a00 100%)",
   },
 ];

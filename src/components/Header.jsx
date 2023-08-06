@@ -54,6 +54,7 @@ const Header = () => {
                         delay={1e3}
                         cascade
                         damping={1e-1}
+                        triggerOnce
                         className="text-border text-white font-bold text-[52px] capitalize mt-4 leading-tight w-[515px] !whitespace-break-spaces"
                       >
                         AgriTech Industry Nourishing a Sustainable Future
@@ -172,7 +173,7 @@ const Header = () => {
             <Image src={"/images/header-title-one.svg"} alt="Food sply" width={235} height={18} />
 
             <h1 className="text-border text-white font-bold text-5xl capitalize mt-4 leading-tight">
-              <Fade delay={1e3} cascade damping={1e-1} className="!whitespace-break-spaces">
+              <Fade delay={1e3} cascade damping={1e-1} triggerOnce className="!whitespace-break-spaces">
                 AgriTech Industry Nourishing a Sustainable Future
               </Fade>
             </h1>

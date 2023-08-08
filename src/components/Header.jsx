@@ -180,7 +180,6 @@ const Header = () => {
         </div>
       </div>
       {/* //! Small screens */}
-
       {isSideMenuOpen && (
         <SlideDownMenu
           menu={NavbarItems}
@@ -207,9 +206,9 @@ const Header = () => {
 
             <h1 className="text-border text-white font-bold text-5xl capitalize mt-4 leading-tight">
               <Fade
-                delay={1e3}
+                delay={10}
                 cascade
-                damping={1e-1}
+                damping={0.025}
                 triggerOnce
                 className="!whitespace-break-spaces"
               >

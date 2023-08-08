@@ -20,9 +20,8 @@ const OurProducts = () => {
                   Our Featured Products
                 </h1>
                 <p className="lg:text-xl leading-[150%] text-text-dark text-center lg:text-left">
-                  Agriculture is one of the largest industries in the world.
-                  Currently its going threw a revolution, let us help you
-                  navigate the new world.{" "}
+                  Agriculture is one of the largest industries in the world. Currently its going
+                  threw a revolution, let us help you navigate the new world.{" "}
                 </p>
               </div>
             </Fade>

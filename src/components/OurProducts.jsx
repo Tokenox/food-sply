@@ -15,9 +15,9 @@ const OurProducts = () => {
           {/* First col */}
           <Slide direction="up" fraction={0} triggerOnce>
             <Fade triggerOnce delay={200} duration={2000}>
-              <div className="mb-6 lg:mb-0 lg:w-[550px] ">
+              <div className="mb-6 lg:mb-0 lg:w-[650px] ">
                 <h1 className="uppercase text-green text-3xl lg:text-5xl font-bold mb-4 text-center lg:text-left lg:mb-7">
-                  Services we provide
+                  Our Featured Products
                 </h1>
                 <p className="lg:text-xl leading-[150%] text-text-dark text-center lg:text-left">
                   Agriculture is one of the largest industries in the world.

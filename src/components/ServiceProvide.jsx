@@ -9,14 +9,18 @@ const ServiceProvide = () => {
       {/* First col */}
       <Slide direction="up" fraction={0} triggerOnce>
         <Fade triggerOnce delay={200} duration={2000}>
-          <div className="w-full lg:w-[550px]">
-            <h1 className="uppercase text-green text-3xl text-center lg:text-left lg:text-5xl font-bold mb-5 lg:mb-7">
-              Services we provide
-            </h1>
+          <div className="w-full lg:w-[580px]">
+            <div className="mb-5 lg:mb-7">
+              <h1 className="uppercase text-green text-3xl text-center lg:text-left lg:text-5xl font-bold mb-3">
+                Food For Sale
+              </h1>
+              <h5 className="uppercase text-orange text-lg lg:text-xl font-bold text-center lg:text-left">
+                Buy our delious produce ethically sourced!
+              </h5>
+            </div>
             <p className="text-base text-center lg:text-left lg:text-xl leading-[150%] text-text-dark">
-              Agriculture is one of the largest industries in the world.
-              Currently its going threw a revolution, let us help you navigate
-              the new world.{" "}
+              Agriculture is one of the largest industries in the world. Currently its going threw a
+              revolution, let us help you navigate the new world.{" "}
             </p>
           </div>
         </Fade>

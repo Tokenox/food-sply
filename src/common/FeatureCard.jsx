@@ -34,10 +34,10 @@ const FeatureCard = ({ title, slug, description, width }) => {
         <Image src={images[slug]} alt={title} width={width || 190} height={145} />
       </div>
       <div className="lg:h-[48%]">
-        <h3 className="text-3xl lg:text-[32px] font-bold leading-[120%] uppercase mb-4 lg:mb-8">{title}</h3>
-        <p className="feature-description leading-[150%]">{description}</p>
+        <h3 className="text-2xl xl:whitespace-nowrap xl:text-[32px] font-bold leading-[120%] uppercase mb-4 lg:mb-8">{title}</h3>
+        <p className="feature-description xl:leading-[150%] h-[150px]  lg:h-[140px] xl:h-[100px] relative z-10">{description}</p>
       </div>
-      <Button className="feature-button link underline underline-offset-8 font-bold">Lean More</Button>
+      {/* <Button className="feature-button link underline underline-offset-8 font-bold">Lean More</Button> */}
     </div>
   );
 };

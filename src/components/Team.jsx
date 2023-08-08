@@ -34,7 +34,7 @@ const Team = () => {
         </Fade>
       </Slide>
 
-      <div className="flex justify-start md:justify-center items-center gap-4 lg:gap-14 overflow-x-scroll">
+      <div className="flex justify-center items-center gap-4 lg:gap-14 overflow-x-scroll">
         {TeamMembers?.map((item, i) => (
           <Zoom triggerOnce key={i}>
             <div

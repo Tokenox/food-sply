@@ -34,7 +34,7 @@ const Tokenomics = () => {
               }
             `;
             return (
-              <div key={item.id} className="w-9 md:w-[70px] lg:w-[140px]">
+              <div key={item.id} className="w-12 md:w-[70px] lg:w-[140px]">
                 <Fade triggerOnce>
                   <div
                     className={classNames("dark-color relative", {
@@ -58,7 +58,6 @@ const Tokenomics = () => {
                     <div className="dark-color w-full h-7 rounded-[50%] absolute top-[-15px] border border-[#899AA1]" />
                   </div>
                 </Fade>
-
                 <Reveal triggerOnce duration={1500} keyframes={currentKeyframe}>
                   <div
                     style={{

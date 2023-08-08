@@ -6,7 +6,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 const Features = () => {
   return (
-    <div className="section-margin-x mt-10">
+    <div className="section-margin-x my-10">
       <Slide triggerOnce direction="up">
         <Fade triggerOnce delay={400}>
           <h2 className="text-green text-2xl lg:text-[32px] font-bold uppercase leading-[120%] underline text-center">

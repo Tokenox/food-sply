@@ -241,30 +241,30 @@ export const TeamMembers = [
     twitterLink: "/",
     instagramLink: "/",
   },
-  {
-    id: 2,
-    name: "Sabina Zunguze",
-    slug: "sabina-zunguze",
-    title: "Founder & C.E.O, Agriculture Research and Organization",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse",
-    facebookLink: "/",
-    twitterLink: "/",
-    instagramLink: "/",
-  },
+  // {
+  //   id: 2,
+  //   name: "Sabina Zunguze",
+  //   slug: "sabina-zunguze",
+  //   title: "Founder & C.E.O, Agriculture Research and Organization",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse",
+  //   facebookLink: "/",
+  //   twitterLink: "/",
+  //   instagramLink: "/",
+  // },
 ];
 
 export const GraphData = [
-  {
-    id: 1,
-    title: "Airdrop",
-    slug: "airdrop",
-    percentage: "1",
-    revenue: "50,000,000,000",
-    hight: 160,
-    background: "linear-gradient(270deg, #2b42f3 0%, #de54ff 100.34%)",
-    backgroundLight: "linear-gradient(180deg, #7149f880 0%, #c251fd00 100%)",
-  },
+  // {
+  //   id: 1,
+  //   title: "Airdrop",
+  //   slug: "airdrop",
+  //   percentage: "1",
+  //   revenue: "50,000,000,000",
+  //   hight: 160,
+  //   background: "linear-gradient(270deg, #2b42f3 0%, #de54ff 100.34%)",
+  //   backgroundLight: "linear-gradient(180deg, #7149f880 0%, #c251fd00 100%)",
+  // },
   {
     id: 2,
     title: "Team",

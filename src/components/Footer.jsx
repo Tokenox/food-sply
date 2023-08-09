@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FooterLinks } from "@/utils/constants";
 import Button from "@/common/Button";
 import { Fade, Slide } from "react-awesome-reveal";
+import { FacebookIcon, InstagramICon, TelegramIcon, TwitterIcon } from "../../public";
 
 const Footer = () => {
   return (
@@ -13,15 +14,10 @@ const Footer = () => {
         <div className="lg:w-[80%]">
           <Slide triggerOnce direction="up">
             <Fade triggerOnce delay={400}>
-              <Image
-                src={"/logo2.svg"}
-                alt="Food sply"
-                width={190}
-                height={58}
-              />
+              <Image src={"/logo2.svg"} alt="Food sply" width={190} height={58} />
               <p className="text-text-silver lg:text-xl leading-[24px] opacity-[0.8] mt-[14px] mb-3 lg:mb-6">
-                We love food, and food goes perfect with community, together
-                pulling in the same direction.
+                We love food, and food goes perfect with community, together pulling in the same
+                direction.
               </p>
             </Fade>
           </Slide>
@@ -49,8 +45,8 @@ const Footer = () => {
                   Newsletter
                 </h4>
                 <p className="lg:text-xl leading-6 text-text-silver my-3 mb-5">
-                  Be the first one to know about discounts, offers and events
-                  weekly in your mailbox.{" "}
+                  Be the first one to know about discounts, offers and events weekly in your
+                  mailbox.{" "}
                 </p>
                 <div className="border border-secondary rounded-full flex p-1">
                   <input
@@ -78,28 +74,12 @@ const Footer = () => {
       <div className="line my-4 lg:mt-[84px] lg:mb-6" />
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-1 lg:gap-0 justify-between ">
         <div className="flex gap-4 items-center">
-          <Image
-            src="/svg/social-icon/facebook.svg"
-            alt="facebook"
-            width={24}
-            height={24}
-          />
-          <Image
-            src="/svg/social-icon/youtube.svg"
-            alt="twitter"
-            width={24}
-            height={24}
-          />
-          <Image
-            src="/svg/social-icon/whatsapp.svg"
-            alt="youtube"
-            width={24}
-            height={24}
-          />
+          <FacebookIcon />
+          <TelegramIcon />
+          <InstagramICon />
+          <TwitterIcon />
         </div>
-        <p className="text-text-silver text-xm">
-          All Copyrights Reserved by Foodsply
-        </p>
+        <p className="text-text-silver text-xm">All Copyrights Reserved by Foodsply</p>
       </div>
     </div>
   );

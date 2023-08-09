@@ -3,6 +3,7 @@ import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import MobileApp from "@/components/MobileApp";
 import OurProducts from "@/components/OurProducts";
 import Roadmap from "@/components/Roadmap";
 import ServiceProvide from "@/components/ServiceProvide";
@@ -20,6 +21,7 @@ export default function Home() {
       <Tokenomics />
       <Team />
       <Faq />
+      <MobileApp />
       <Clients />
       <Footer />
     </main>

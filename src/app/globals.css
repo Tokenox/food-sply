@@ -253,7 +253,7 @@ body {
     position: absolute;
     transform: translate(26px, 12px);
   }
-  .initiation-text{
+  .initiation-text {
     padding-top: 4px;
   }
 }
@@ -310,4 +310,9 @@ body {
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 1;
+}
+
+/* //! MobileApp styles */
+.background-mobile {
+  background: linear-gradient(179deg, #f7941d 0%, rgba(255, 255, 255, 0) 100%);
 }

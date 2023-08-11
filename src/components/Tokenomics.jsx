@@ -8,7 +8,7 @@ import { keyframes } from "@emotion/react";
 
 const Tokenomics = () => {
   return (
-    <div className="bg-bg-dark">
+    <div className="bg-bg-dark" id="tokenomics">
       <div className="section-margin py-[100px]">
         <Slide triggerOnce direction="left">
           <Fade triggerOnce delay={400}>

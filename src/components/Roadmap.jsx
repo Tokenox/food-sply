@@ -5,7 +5,7 @@ import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
 const Roadmap = () => {
   return (
-    <div>
+    <div id="roadmap">
       <div className="hidden lg:block section-margin-x">
         <div className="flex flex-col items-center w-full mb-[120px]">
           <Slide triggerOnce direction="up">
@@ -18,8 +18,8 @@ const Roadmap = () => {
           <Slide triggerOnce direction="up">
             <Fade triggerOnce delay={400}>
               <p className="text-text-grey text-xl capitalize text-center w-[640px]">
-                we believe that a well-defined roadmap is the key to achieving
-                our vision and driving our organization towards success.
+                we believe that a well-defined roadmap is the key to achieving our vision and
+                driving our organization towards success.
               </p>
             </Fade>
           </Slide>
@@ -89,8 +89,8 @@ const Roadmap = () => {
             Roadmaps Launch Timeline
           </h1>
           <p className="text-text-dark capitalize text-center">
-            we believe that a well-defined roadmap is the key to achieving our
-            vision and driving our organization towards success.
+            we believe that a well-defined roadmap is the key to achieving our vision and driving
+            our organization towards success.
           </p>
         </div>
         <div className="relative">
@@ -139,13 +139,10 @@ const CardLeft = ({ title, description, slug }) => {
             className={classNames(
               "bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative",
               {
-                ['bg-[url("/svg/roadmap/prototype.svg")]']:
-                  slug === "prototype",
-                ['bg-[url("/svg/roadmap/accelerator.svg")]']:
-                  slug === "accelerator",
-                ['bg-[url("/svg/roadmap/financial.svg")]']:
-                  slug === "financial",
-              }
+                ['bg-[url("/svg/roadmap/prototype.svg")]']: slug === "prototype",
+                ['bg-[url("/svg/roadmap/accelerator.svg")]']: slug === "accelerator",
+                ['bg-[url("/svg/roadmap/financial.svg")]']: slug === "financial",
+              },
             )}
           >
             <p className="text-lg md:text-2xl font-bold capitalize text-white text-center pt-4 md:pt-5">
@@ -155,7 +152,7 @@ const CardLeft = ({ title, description, slug }) => {
               <p
                 dangerouslySetInnerHTML={{ __html: description }}
                 className={classNames(
-                  "roadmap-description px-3 md:px-0 md:text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
+                  "roadmap-description px-3 md:px-0 md:text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]",
                 )}
               />
             </div>
@@ -180,20 +177,16 @@ const CardRight = ({ title, description, slug, className }) => {
               "bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative",
               {
                 ["bg-[url('/svg/roadmap/supply.svg')]"]: slug === "supply",
-                ['bg-[url("/svg/roadmap/initiation.svg")]']:
-                  slug === "initiation",
-              }
+                ['bg-[url("/svg/roadmap/initiation.svg")]']: slug === "initiation",
+              },
             )}
           >
             <p
-              className={classNames(
-                "font-bold capitalize text-white text-center pt-4 md:pt-5",
-                {
-                  ["text-lg md:text-2xl"]: slug === "supply",
-                  ["initiation-text text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]:
-                    slug === "initiation",
-                }
-              )}
+              className={classNames("font-bold capitalize text-white text-center pt-4 md:pt-5", {
+                ["text-lg md:text-2xl"]: slug === "supply",
+                ["initiation-text text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]:
+                  slug === "initiation",
+              })}
             >
               {title}
             </p>
@@ -201,7 +194,7 @@ const CardRight = ({ title, description, slug, className }) => {
               <p
                 dangerouslySetInnerHTML={{ __html: description }}
                 className={classNames(
-                  "roadmap-description px-3 md:px-0 text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]"
+                  "roadmap-description px-3 md:px-0 text-lg leading-[140%] capitalize text-center text-text-dark w-[280px]",
                 )}
               />
             </div>
@@ -216,9 +209,7 @@ const Circle = ({ color }) => {
   return (
     <Zoom triggerOnce>
       <div
-        className={classNames(
-          "w-[50px] h-[50px] rounded-full flex justify-center items-center"
-        )}
+        className={classNames("w-[50px] h-[50px] rounded-full flex justify-center items-center")}
         style={{ backgroundColor: color }}
       >
         <div className="w-[32px] h-[32px] rounded-full bg-white" />

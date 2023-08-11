@@ -39,8 +39,8 @@ const Header = () => {
   };
 
   return (
-    <Fragment>
-      <div className="hidden lg:block h-screen bg-[url('/svg/header-bg.svg')] bg-no-repeat bg-cover bg-center pt-4 min-h-[800px]">
+    <div id="home">
+      <div className="hidden lg:block h-screen bg-[url('/svg/header-bg.svg')] bg-no-repeat bg-cover bg-center min-h-[800px]">
         <Navbar />
         <div className="section-margin-x flex justify-between items-center h-[75%]">
           {/* First Col */}
@@ -294,7 +294,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

@@ -25,7 +25,7 @@ const Team = () => {
   };
 
   return (
-    <div className="mt-10 lg:mt-[130px] section-margin-x">
+    <div className="mt-10 lg:mt-[130px] section-margin-x" id="team">
       <Slide triggerOnce direction="up">
         <Fade triggerOnce delay={600}>
           <h2 className="text-3xl font-bold text-green mb-5 lg:mb-[80px] text-center uppercase">
@@ -47,11 +47,7 @@ const Team = () => {
               onMouseEnter={(e) => handleCardFlip(e, item.id)}
               onMouseLeave={(e) => handleCardFlip(e)}
             >
-              <div
-                className={`flip-card-inner ${
-                  isActive == item.id ? "flip-card-flip" : ""
-                }`}
-              >
+              <div className={`flip-card-inner ${isActive == item.id ? "flip-card-flip" : ""}`}>
                 {/* // front side */}
                 <div className="flip-card-front rounded-[15px]">
                   <Image
@@ -66,9 +62,7 @@ const Team = () => {
                     {item.name}
                   </h4>
                   <p className="leading-6 mb-5">{item.title}</p>
-                  <p className="leading-7 text-lg font-light">
-                    {item.description}
-                  </p>
+                  <p className="leading-7 text-lg font-light">{item.description}</p>
                   <div className="flex gap-6 items-center justify-center mt-[60px]">
                     <Image
                       src={"/svg/social-icon/facebook2.svg"}

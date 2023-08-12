@@ -255,7 +255,7 @@ const Header = () => {
               <p className="text-[22px] font-bold text-center">Token Swap</p>
               <div className="mb-4">
                 <p className="ml-4 mb-2.5">From</p>
-                <div className="bg-night flex justify-between items-center p-2 pr-6 rounded-full w-[324px]">
+                <div className="bg-night flex justify-between items-center p-2 pr-6 rounded-full w-full">
                   <div className="rounded-full bg-dark py-3 px-5 flex gap-6">
                     <div className="flex gap-2">
                       <Image src={"/icon/eth-icon.svg"} alt="Ethereum" width={22} height={22} />
@@ -263,12 +263,12 @@ const Header = () => {
                     </div>
                     <Image src={"/icon/down-arrow.svg"} alt="Arrow Down" width={13} height={22} />
                   </div>
-                  <p className="text-text-grey text-sm">Balance: 430.00</p>
+                  <p className="text-text-grey text-sm text-end md:text-start">Balance: 430.00</p>
                 </div>
               </div>
               <div className="">
                 <p className="ml-4 mb-2.5">To</p>
-                <div className="bg-night flex justify-between items-center p-2 pr-6 rounded-full w-[324px]">
+                <div className="bg-night flex justify-between items-center p-2 pr-6 rounded-full w-full">
                   <div className="rounded-full bg-dark py-3 px-5 flex gap-6">
                     <div className="flex gap-2">
                       <Image src={"/icon/eth-icon.svg"} alt="Ethereum" width={22} height={22} />
@@ -276,7 +276,7 @@ const Header = () => {
                     </div>
                     <Image src={"/icon/down-arrow.svg"} alt="Arrow Down" width={13} height={22} />
                   </div>
-                  <p className="text-text-grey text-sm">Balance: 430.00</p>
+                  <p className="text-text-grey text-sm text-end md:text-start">Balance: 430.00</p>
                 </div>
               </div>
               <div className="py-6">

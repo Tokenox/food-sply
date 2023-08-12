@@ -217,7 +217,7 @@ const Header = () => {
             </h1>
 
             {/* Timer */}
-            <div className="custom-border backdrop-blur-[6px] px-6 pt-3 pb-5 mt-6">
+            <div className="custom-border backdrop-blur-[6px] px-1.5 min-[390px]:px-6 pt-3 pb-5 mt-6">
               <p className="font-bold text-white text-center mb-5">Time Left To Invest</p>
 
               <div className="flex gap-4 items-baseline text-white">

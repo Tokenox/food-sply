@@ -110,7 +110,7 @@ export const Faqs = [
   {
     id: 2,
     question: "How does food get delivered?",
-    answer: "Food is delivered by our network of drivers.",
+    answer: "Food gets delivered by creating digital agreements between different communities.",
     slug: "panel2",
   },
   {
@@ -138,7 +138,7 @@ export const Faqs = [
     id: 6,
     question: "Why Africa?",
     answer:
-      "Africa is the second largest continent in the world, with a population of 1.3 billion people. Africa has the largest amount of arable land in the world, with 60% of the world’s uncultivated land. Africa has the youngest population in the world, with 60% of the population under the age of 25. Africa has the fastest growing middle class in the world, with 1/3 of the population considered middle class. Africa has the fastest growing economy in the world, with 7 of the 10 fastest growing economies in the world. Africa has the fastest growing urban population in the world, with 40% of the population living in urban areas. Africa has the fastest growing internet penetration in the world, with 40% of the population having access to the internet. Africa has the fastest growing mobile penetration in the world, with 80% of the population having access to a mobile phone.",
+      "Africa is at the precipice of innovation and bracing for an agriculture revolution.",
     slug: "panel6",
   },
 ];
@@ -197,35 +197,65 @@ export const FooterLinks = [
 export const Products = [
   {
     id: 1,
-    title: "Fresh Smoothie",
+    title: "Mixed Smoothie",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    image: "/svg/product/product1.svg",
-    price: "$10",
+      "A delicious blend of refreshing fruits and nutritious ingredients for a healthy boost of energy.",
+    image: "/images/products/strawberry.jpg",
+    price: "$210",
   },
   {
     id: 2,
-    title: "Fresh Smoothie",
+    title: "Virtual Woo Ninja",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    image: "/svg/product/product1.svg",
-    price: "$10",
+      "Indulge in the exotic and tangy sweetness of passion fruit, a tropical delight that will awaken your taste buds.",
+    image: "/images/products/ninja.png",
+    price: "$300",
   },
   {
     id: 3,
-    title: "Fresh Smoothie",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    image: "/svg/product/product1.svg",
-    price: "$10",
+    title: "Pomegranate",
+    description: " Bursting with juicy sweetness, pomegranate is a powerhouse of antioxidants for a tasty and healthful treat.",
+    image: "/images/products/pomegranate.png",
+    price: "$80",
   },
   {
     id: 4,
-    title: "Fresh Smoothie",
+    title: "Fresh Green Chilis",
+    description: "Spice up your meals with the vibrant and zesty flavor of fresh green chilis, perfect for adding a kick to any dish.",
+    image: "/images/products/green-leaf.png",
+    price: "$50",
+  },
+  {
+    id: 5,
+    title: "Fresh Chilis",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    image: "/svg/product/product1.svg",
-    price: "$10",
+      "Elevate your culinary creations with these fiery and flavorful fresh chilis, adding a fiery twist to your favorite recipes.",
+    image: "/images/products/mix-chilis.png",
+    price: "$110",
+  },
+  {
+    id: 6,
+    title: "Green Chilis",
+    description:
+      "Add a zesty kick to your dishes with these vibrant and fresh green chilis, perfect for spice lovers.",
+    image: "/images/products/green-chilis.png",
+    price: "$70",
+  },
+  {
+    id: 7,
+    title: "Lettuce",
+    description:
+      "Crisp and refreshing, lettuce is the ultimate choice for creating healthy and satisfying salads and wraps.",
+    image: "/images/products/lettuce.png",
+    price: "$200",
+  },
+  {
+    id: 8,
+    title: "Mix Vegetables",
+    description:
+      "A delightful medley of colorful and nutritious veggies, providing a flavorful and wholesome addition to your meals.",
+    image: "/images/products/mix-vegetables.png",
+    price: "$100",
   },
 ];
 
@@ -303,8 +333,7 @@ export const GraphData = [
     percentage: "60",
     revenue: "1,750,000,000,000",
     hight: 330,
-    background:
-      "linear-gradient(270deg, #fb5979 0%, #aa80b8 52.57%, #50aafd 100.34%)",
+    background: "linear-gradient(270deg, #fb5979 0%, #aa80b8 52.57%, #50aafd 100.34%)",
     backgroundLight: "linear-gradient(180deg, #ed84ff80 0%, #fa746a00 100%)",
   },
 ];

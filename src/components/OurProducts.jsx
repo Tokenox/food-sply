@@ -10,7 +10,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 const OurProducts = () => {
   return (
     <div className="bg-[#f7941d0d] mb-6 lg:mb-[100px]">
-      <div className="py-10">
+      <div className="py-10 lg:px-[100px]">
         <div className="section-margin flex flex-col lg:flex-row justify-between items-center gap-4">
           {/* First col */}
           <Slide direction="up" fraction={0} triggerOnce>
@@ -44,11 +44,11 @@ const OurProducts = () => {
         <div>
           <Slide
             triggerOnce
-            direction="up"
+            direction="left"
             damping={0.1}
-            className="overflow-x-scroll justify-start mt-16 lg:mt-[120px] h-[470px] px-6 lg:px-0 md:mb-10 flex gap-9 2xl:gap-12 lg:justify-center items-center"
+            className="min-h-[500px] mt-16 lg:mt-[120px] px-6 lg:px-0 md:mb-10 flex overflow-x-scroll lg:overflow-x-hidden lg:grid lg:grid-cols-3 min-[1360px]:grid-cols-4 gap-6 place-items-center"
           >
-            <Fade triggerOnce cascade damping={0.2}>
+            <Fade triggerOnce cascade damping={0.2} duration={200}>
               {Products.map((product) => (
                 <Product
                   key={product.id}
@@ -63,7 +63,7 @@ const OurProducts = () => {
         </div>
       </div>
       {/* Popular Products */}
-      <div>
+      {/* <div>
         <Slide triggerOnce direction="up">
           <Fade triggerOnce delay={600}>
             <h2 className="text-green text-2xl lg:text-[32px] font-bold uppercase leading-[120%] underline text-center pt-10 lg:pt-[90px] lg:pb-[75px]">
@@ -81,7 +81,7 @@ const OurProducts = () => {
         <div className="mt-10 md:hidden">
           <CarouselSm data={PopularProducts} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -249,11 +249,28 @@ body {
 @media (max-width: 767px) {
   .roadmap-box-left {
     position: absolute;
-    transform: translate(24px, 12px);
+    transform: translate(25px, 15px);
   }
   .roadmap-box-right {
     position: absolute;
-    transform: translate(26px, 12px);
+    transform: translate(30px, 15px);
+  }
+  .initiation-text {
+    padding-top: 4px;
+  }
+}
+.roadmap-bar-sm {
+  transform: translate(1400%, 20%);
+}
+
+@media (max-width: 350px) {
+  .roadmap-box-left {
+    position: absolute;
+    transform: translate(8%, 5%);
+  }
+  .roadmap-box-right {
+    position: absolute;
+    transform: translate(9%, 5%);
   }
   .initiation-text {
     padding-top: 4px;

@@ -93,7 +93,7 @@ const Roadmap = () => {
             our organization towards success.
           </p>
         </div>
-        <div className="relative">
+        <div className="relative min-h-[1550px]">
           <div className="roadmap-bar-sm bg-[#E6E6E6] w-3 h-[1100px] absolute"></div>
           <CardLeft
             title={"Prototype Completion"}
@@ -137,7 +137,7 @@ const CardLeft = ({ title, description, slug }) => {
         <Fade triggerOnce delay={400}>
           <div
             className={classNames(
-              "bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative",
+              "bg-no-repeat bg-contain w-full md:w-[460px] h-[75px] min-[365px]:h-[110px] relative",
               {
                 ['bg-[url("/svg/roadmap/prototype.svg")]']: slug === "prototype",
                 ['bg-[url("/svg/roadmap/accelerator.svg")]']: slug === "accelerator",
@@ -145,10 +145,10 @@ const CardLeft = ({ title, description, slug }) => {
               },
             )}
           >
-            <p className="text-lg md:text-2xl font-bold capitalize text-white text-center pt-4 md:pt-5">
+            <p className="text-sm min-[365px]:text-lg md:text-2xl font-bold capitalize text-white text-center pt-4 md:pt-5">
               {title}
             </p>
-            <div className="roadmap-box-left bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
+            <div className="roadmap-box-left bg-[#F2F2F2] w-[85%] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
               <p
                 dangerouslySetInnerHTML={{ __html: description }}
                 className={classNames(
@@ -174,7 +174,7 @@ const CardRight = ({ title, description, slug, className }) => {
         <Fade triggerOnce delay={400}>
           <div
             className={classNames(
-              "bg-no-repeat bg-contain w-full md:w-[460px] h-[110px] relative",
+              "bg-no-repeat bg-contain w-full md:w-[460px] h-[75px] min-[365px]:h-[110px] relative",
               {
                 ["bg-[url('/svg/roadmap/supply.svg')]"]: slug === "supply",
                 ['bg-[url("/svg/roadmap/initiation.svg")]']: slug === "initiation",
@@ -183,14 +183,14 @@ const CardRight = ({ title, description, slug, className }) => {
           >
             <p
               className={classNames("font-bold capitalize text-white text-center pt-4 md:pt-5", {
-                ["text-lg md:text-2xl"]: slug === "supply",
-                ["initiation-text text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]:
+                ["text-sm min-[365px]:text-lg md:text-2xl"]: slug === "supply",
+                ["initiation-text text-sm min-[365px]:text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]:
                   slug === "initiation",
               })}
             >
               {title}
             </p>
-            <div className="roadmap-box-right bg-[#F2F2F2] w-[300px] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
+            <div className="roadmap-box-right bg-[#F2F2F2] w-[85%] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
               <p
                 dangerouslySetInnerHTML={{ __html: description }}
                 className={classNames(

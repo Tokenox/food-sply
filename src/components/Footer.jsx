@@ -21,7 +21,7 @@ const Footer = () => {
               </p>
             </Fade>
           </Slide>
-          <div className="flex items-center gap-3 lg:gap-4 lg:w-[150px] mb-2">
+          <div className="flex items-center gap-3 lg:gap-4 lg:w-[150px] mb-2 flex-wrap">
             {FooterLinks?.map((item, i) => (
               <Slide triggerOnce direction="left" key={i}>
                 <Fade triggerOnce delay={i * 200}>

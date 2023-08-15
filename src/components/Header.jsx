@@ -210,43 +210,43 @@ const Header = () => {
                 cascade
                 damping={0.025}
                 triggerOnce
-                className="!whitespace-break-spaces"
+                className="!whitespace-break-spaces w-[298px]"
               >
                 AgriTech Industry Nourishing a Sustainable Future
               </Fade>
             </h1>
 
             {/* Timer */}
-            <div className="custom-border backdrop-blur-[6px] px-1.5 min-[390px]:px-6 pt-3 pb-5 mt-6">
+            <div className="custom-border backdrop-blur-[6px] px-2 min-[390px]:px-6 pt-3 pb-5 mt-6">
               <p className="font-bold text-white text-center mb-5">Time Left To Invest</p>
 
-              <div className="flex gap-4 items-baseline text-white">
+              <div className="flex gap-4 items-baseline justify-center text-white">
                 <div className="flex flex-col items-center">
-                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                  <div className="box-filled rounded-md w-9 h-9 min-[365px]:w-[50px] min-[365px]:h-[50px] flex justify-center items-center min-[365px]:text-[22px] text-white">
                     {days}
                   </div>
-                  <span className="mt-1">Days</span>
+                  <span className="mt-1 text-sm">Days</span>
                 </div>
                 :
                 <div className="flex flex-col items-center">
-                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                  <div className="box-filled rounded-md w-9 h-9 min-[365px]:w-[50px] min-[365px]:h-[50px] flex justify-center items-center min-[365px]:text-[22px] text-white">
                     {hours}
                   </div>
-                  <span className="mt-1">Hours</span>
+                  <span className="mt-1 text-sm">Hours</span>
                 </div>
                 :
                 <div className="flex flex-col items-center">
-                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                  <div className="box-filled rounded-md w-9 h-9 min-[365px]:w-[50px] min-[365px]:h-[50px] flex justify-center items-center min-[365px]:text-[22px] text-white">
                     {minutes}
                   </div>
-                  <span className="mt-1">Min</span>
+                  <span className="mt-1 text-sm">Min</span>
                 </div>
                 :
                 <div className="flex flex-col items-center">
-                  <div className="box-filled rounded-md w-[50px] h-[50px] flex justify-center items-center text-[22px] text-white">
+                  <div className="box-filled rounded-md w-9 h-9 min-[365px]:w-[50px] min-[365px]:h-[50px] flex justify-center items-center min-[365px]:text-[22px] text-white">
                     {seconds}
                   </div>
-                  <span className="mt-1">Sec</span>
+                  <span className="mt-1 text-sm">Sec</span>
                 </div>
               </div>
             </div>

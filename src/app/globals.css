@@ -262,6 +262,12 @@ body {
 .roadmap-bar-sm {
   transform: translate(1400%, 20%);
 }
+@media (max-width: 370px) {
+  .roadmap-box-iniation{
+    position: absolute;
+    transform: translate(9%, 4%);
+  }
+}
 
 @media (max-width: 350px) {
   .roadmap-box-left {
@@ -271,6 +277,10 @@ body {
   .roadmap-box-right {
     position: absolute;
     transform: translate(9%, 5%);
+  }
+  .roadmap-box-iniation{
+    position: absolute;
+    transform: translate(9%, 0);
   }
   .initiation-text {
     padding-top: 4px;

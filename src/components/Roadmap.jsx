@@ -184,13 +184,15 @@ const CardRight = ({ title, description, slug, className }) => {
             <p
               className={classNames("font-bold capitalize text-white text-center pt-4 md:pt-5", {
                 ["text-sm min-[365px]:text-lg md:text-2xl"]: slug === "supply",
-                ["initiation-text text-sm min-[365px]:text-base md:text-lg h-[44px] md:h-[52px] md:pt-6"]:
+                ["initiation-text text-sm min-[365px]:text-base md:text-lg h-[44px] md:h-[52px] p-1 md:pt-6"]:
                   slug === "initiation",
               })}
             >
               {title}
             </p>
-            <div className="roadmap-box-right bg-[#F2F2F2] w-[85%] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center">
+            <div className={classNames("roadmap-box-right bg-[#F2F2F2] w-[85%] md:w-[380px] h-[180px] md:h-[236px] flex justify-center items-center",{
+              ["roadmap-box-iniation"]: slug === "initiation",
+            })}>
               <p
                 dangerouslySetInnerHTML={{ __html: description }}
                 className={classNames(

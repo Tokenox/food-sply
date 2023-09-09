@@ -36,6 +36,9 @@ body {
 .text-border {
   text-shadow: -1px 0 #f7941d, 0 1px #f7941d, 1px 0 #f7941d, 0 -1px #f7941d;
 }
+.text-border-v2 {
+  /* -webkit-text-stroke: 1.5px #f7941d; */
+}
 
 /* //! Gradient Border */
 .custom-light {
@@ -263,7 +266,7 @@ body {
   transform: translate(1400%, 20%);
 }
 @media (max-width: 370px) {
-  .roadmap-box-iniation{
+  .roadmap-box-iniation {
     position: absolute;
     transform: translate(9%, 4%);
   }
@@ -278,7 +281,7 @@ body {
     position: absolute;
     transform: translate(9%, 5%);
   }
-  .roadmap-box-iniation{
+  .roadmap-box-iniation {
     position: absolute;
     transform: translate(9%, 0);
   }

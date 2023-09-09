@@ -1,7 +1,7 @@
 export const NavbarItems = [
   {
     title: "Home",
-    url: "#home",
+    url: "/",
   },
   {
     title: "Tokenomics",
@@ -13,7 +13,7 @@ export const NavbarItems = [
   },
   {
     title: "NFT",
-    url: "#nft",
+    url: "/nft",
   },
   {
     title: "Team",

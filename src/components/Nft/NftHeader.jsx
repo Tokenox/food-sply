@@ -27,14 +27,14 @@ const NftHeader = () => {
             />
           </div>
           <div className="w-[595px] flex flex-col items-center">
-            <h2 className="text-border-v2 text-center text-[42px] text-white capitalize w-[630px]">
+            <h2 className="text-border-v2 text-center text-[42px] font-medium text-white capitalize w-[630px]">
               Own Tomorrow&apos;s Harvest Today
             </h2>
-            <p className="text-2xl text-white capitalize text-center w-[544px] my-6 min-[1400px]:my-9">
+            <p className="text-border-sm text-2xl text-white capitalize text-center w-[544px] my-6 min-[1400px]:my-9">
               Dive into a digital harvest where each NFT stands for sustainability and tech harmony.
               Cultivate the future, one veggie at a time.
             </p>
-            <Button type="fill" className="text-xl font-bold py-3 mt-4 min-[1400px]:mt-0">
+            <Button type="fill" className="text-xl font-bold py-3 mt-4 min-[1400px]:mt-3">
               Mint My Veggie NFT
             </Button>
             <Image
@@ -42,7 +42,7 @@ const NftHeader = () => {
               alt="discover and collect nfts"
               width={1070}
               height={200}
-              className="absolute hidden min-[1400px]:block bottom-[-30px] 2xl:bottom-[-50px]"
+              className="absolute hidden min-[1400px]:block bottom-[-30px] 2xl:bottom-[-56px]"
             />
           </div>
           <div className="relative z-[1]">

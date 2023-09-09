@@ -37,7 +37,16 @@ body {
   text-shadow: -1px 0 #f7941d, 0 1px #f7941d, 1px 0 #f7941d, 0 -1px #f7941d;
 }
 .text-border-v2 {
-  /* -webkit-text-stroke: 1.5px #f7941d; */
+  color: #f7941d;
+  font-family: "Helvetica Neue";
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+}
+.text-border-sm {
+  color: #f7941d;
+  font-family: "Helvetica Neue";
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: .2px;
 }
 
 /* //! Gradient Border */

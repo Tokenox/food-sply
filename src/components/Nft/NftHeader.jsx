@@ -42,7 +42,7 @@ const NftHeader = () => {
               alt="discover and collect nfts"
               width={1070}
               height={200}
-              className="absolute hidden min-[1450px]:block bottom-[-50px]"
+              className="absolute hidden min-[1400px]:block bottom-[-30px] 2xl:bottom-[-50px]"
             />
           </div>
           <div className="relative z-[1]">

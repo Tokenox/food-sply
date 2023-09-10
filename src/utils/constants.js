@@ -137,8 +137,7 @@ export const Faqs = [
   {
     id: 6,
     question: "Why Africa?",
-    answer:
-      "Africa is at the precipice of innovation and bracing for an agriculture revolution.",
+    answer: "Africa is at the precipice of innovation and bracing for an agriculture revolution.",
     slug: "panel6",
   },
 ];
@@ -214,14 +213,16 @@ export const Products = [
   {
     id: 3,
     title: "Pomegranate",
-    description: " Bursting with juicy sweetness, pomegranate is a powerhouse of antioxidants for a tasty and healthful treat.",
+    description:
+      " Bursting with juicy sweetness, pomegranate is a powerhouse of antioxidants for a tasty and healthful treat.",
     image: "/images/products/pomegranate.png",
     price: "$80",
   },
   {
     id: 4,
     title: "Fresh Green Chilis",
-    description: "Spice up your meals with the vibrant and zesty flavor of fresh green chilis, perfect for adding a kick to any dish.",
+    description:
+      "Spice up your meals with the vibrant and zesty flavor of fresh green chilis, perfect for adding a kick to any dish.",
     image: "/images/products/green-leaf.png",
     price: "$50",
   },
@@ -335,5 +336,38 @@ export const GraphData = [
     hight: 330,
     background: "linear-gradient(270deg, #fb5979 0%, #aa80b8 52.57%, #50aafd 100.34%)",
     backgroundLight: "linear-gradient(180deg, #ed84ff80 0%, #fa746a00 100%)",
+  },
+];
+
+//! NFT page data
+
+export const NftStepsData = [
+  {
+    id: 1,
+    title: "Connect Your Wallet",
+    image: "/nft-images/steps/step1.svg",
+    width: 151,
+    height: 111,
+  },
+  {
+    id: 2,
+    title: "Choose Your Veggie",
+    image: "/nft-images/steps/step2.svg",
+    width: 171,
+    height: 110,
+  },
+  {
+    id: 3,
+    title: "Confirm the Transaction",
+    image: "/nft-images/steps/step3.svg",
+    width: 220,
+    height: 111,
+  },
+  {
+    id: 4,
+    title: "receive Your NFTs",
+    image: "/nft-images/steps/step4.svg",
+    width: 145,
+    height: 112,
   },
 ];

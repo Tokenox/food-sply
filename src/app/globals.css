@@ -46,7 +46,7 @@ body {
   color: #f7941d;
   font-family: "Helvetica Neue";
   -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: .2px;
+  -webkit-text-stroke-width: 0.2px;
 }
 
 /* //! Gradient Border */
@@ -353,6 +353,10 @@ body {
   z-index: 1;
 }
 
+/* //! Our nft community */
+.bg-size-x {
+  background-size: 100% auto;
+}
 /* //! MobileApp styles */
 .background-mobile {
   background: linear-gradient(179deg, #f7941d 0%, rgba(255, 255, 255, 0) 100%);

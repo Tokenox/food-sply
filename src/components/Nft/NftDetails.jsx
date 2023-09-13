@@ -5,6 +5,8 @@ import React, { Fragment } from "react";
 import Slider from "react-slick";
 import { COLLECTION_CARD_DATA } from "../../utils/constants";
 import NftCard from "./NftCard";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const NftDetails = () => {
   return (
@@ -71,45 +73,11 @@ const NftDetails = () => {
           <h3 className="text-green text-[40px] font-bold">Related NFT</h3>
         </div>
         <div className="w-full h-[2px] bg-[#D2D2D2] mt-5 mb-14" />
-        {/* <Slider {...settings} className="bg-red-600 min-h-[400px]">
+        <Slider {...settings}>
           {COLLECTION_CARD_DATA.map((item, index) => (
-            <div className="p-3 bg-red-300 rounded-2xl" key={index}>
-              <div className="flex flex-col justify-between items-start">
-                <div className="h-[39vh] w-[100%]">
-                  <Image
-                    src={item.img}
-                    alt=""
-                    width={270}
-                    height={290}
-                    className="h-full w-[100%] rounded-t-2xl object-fit border"
-                  />
-                </div>
-                <h2 className="text-[#010101] text-2xl font-bold mb-3 mt-3 capitalize">{item.card_heading}</h2>
-                <div className="border-t-2 border-solid border-orange h-[12vh] w-[100%] flex  justify-between items-center">
-                  <div className="flex justify-between items-center gap-2">
-                    <div className="">
-                      <Image
-                        src="/nft-images/collection/Group 1000001783.svg"
-                        alt=""
-                        width={20}
-                        height={32}
-                      />
-                    </div>
-                    <div className="flex justify-center items-center flex-col ">
-                      <p className="text-xs font-normal text-[#010101] mb-1">Current Price</p>
-                      <p className="text-xl font-normal text-[#010101]">4.32 ETH</p>
-                    </div>
-                  </div>
-                  <div>
-                    <button className="py-[9px] px-[28px] border-2 border-solid border-orange rounded-[8px] text-orange hover:bg-orange hover:text-white">
-                      BUY NOW
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <NftCard key={index} image={item.img} name={item.card_heading} />
           ))}
-        </Slider> */}
+        </Slider>
       </div>
     </Fragment>
   );
@@ -138,7 +106,7 @@ const settings = {
   arrows: false,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1400,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -147,7 +115,7 @@ const settings = {
       },
     },
     {
-      breakpoint: 600,
+      breakpoint: 800,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -155,7 +123,7 @@ const settings = {
       },
     },
     {
-      breakpoint: 480,
+      breakpoint: 580,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

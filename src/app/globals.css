@@ -49,6 +49,14 @@ body {
   -webkit-text-stroke-width: 0.2px;
 }
 
+/* //! text gradient */
+.text-gradient {
+  background: linear-gradient(180deg, #326542 -16.67%, #f7941d 70.13%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* //! Gradient Border */
 .custom-light {
   position: relative;
@@ -357,6 +365,41 @@ body {
 .bg-size-x {
   background-size: 100% auto;
 }
+/* //! Collections */
+.explore_heading {
+  font-family: Roboto Condensed;
+}
+.explore_text {
+  font-family: Roboto Condensed;
+}
+.collection_btn {
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 2px solid #39b54a;
+  outline-style: none;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #010101;
+  font-family: Roboto Condensed;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.collection_btn:hover {
+  background-color: #39b54a;
+  color: white;
+}
+.price {
+  font-family: Roboto Condensed;
+}
+.cltn_btn {
+  font-family: Roboto Condensed;
+}
+.cltn_card_text {
+  font-family: Roboto Condensed;
+}
+
+
 /* //! MobileApp styles */
 .background-mobile {
   background: linear-gradient(179deg, #f7941d 0%, rgba(255, 255, 255, 0) 100%);

@@ -371,3 +371,58 @@ export const NftStepsData = [
     height: 112,
   },
 ];
+
+//! Collections
+export const COLLECTION_CARD_DATA = [
+  {
+    img: "/nft-images/collection/shop11a-1.png",
+    card_heading: "Mixed Smoothie",
+  },
+  {
+    img: "/nft-images/collection/products_04-768x768.png",
+    card_heading: "Virtual Woo Ninja",
+  },
+  {
+    img: "/nft-images/collection/products_05.png",
+    card_heading: "Pomegranate",
+  },
+  {
+    img: "/nft-images/collection/pexels-daria-shevtsova-1095550-768x512.png",
+    card_heading: "fresh Green Chilis",
+  },
+  {
+    img: "/nft-images/collection/img-3.png",
+    card_heading: "Fresh Chilis",
+  },
+  {
+    img: "/nft-images/collection/img-9.png",
+    card_heading: "Green Chilis",
+  },
+
+  {
+    img: "/nft-images/collection/pexels-lisa-fotios-1351238-scaled.png",
+    card_heading: "Lettuce",
+  },
+  {
+    img: "/nft-images/collection/pexels-ella-olsson-1640777-768x512.png",
+    card_heading: "Mixed Vegetables",
+  },
+];
+
+export const Collection_UPER_BTNS = [
+  {
+    btn_text: "ALL",
+  },
+  {
+    btn_text: "FOOD",
+  },
+  {
+    btn_text: "FRESH CHILIS",
+  },
+  {
+    btn_text: "FRESH Green CHILIS",
+  },
+  {
+    btn_text: "Green Chilis",
+  },
+];

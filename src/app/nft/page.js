@@ -1,5 +1,6 @@
 import Clients from "@/components/Clients";
 import Footer from "@/components/Footer";
+import Collections from "@/components/Nft/Collections";
 import NftHeader from "@/components/Nft/NftHeader";
 import NftSteps from "@/components/Nft/NftSteps";
 import OurCommunity from "@/components/Nft/OurCommunity";
@@ -10,6 +11,7 @@ const Nft = () => {
     <div>
       <NftHeader />
       <NftSteps />
+      <Collections />
       <OurCommunity />
       <Clients />
       <Footer />

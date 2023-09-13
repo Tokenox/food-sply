@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
 import classNames from "classnames";
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   const [color, setColor] = useState(false);
 
   useEffect(() => {
@@ -18,12 +18,15 @@ const Navbar = () => {
     if (window.scrollY >= 60) setColor(true);
     else setColor(false);
   };
+
   return (
-    <div className={classNames("px-[100px] py-2 flex justify-between items-center",{
-      // ['fixed w-full z-20 bg-green']: color,
-    })}>
+    <div
+      className={classNames("px-[100px] py-2 flex justify-between items-center", {
+        // ['fixed w-full z-20 bg-green']: color,
+      })}
+    >
       <Image src={"/logo.svg"} alt="Food Sply" width={181} height={54} />
-      <div className="flex gap-8 h-[54px] items-center text-white">
+      <div className={classNames("flex gap-8 h-[54px] items-center text-white", className)}>
         {NavbarItems?.map((item, i) => (
           <Fade key={i} triggerOnce delay={i * 100}>
             <Link href={item.url} className="navbar-hover-effect text-xl">
@@ -33,7 +36,7 @@ const Navbar = () => {
         ))}
       </div>
       <Fade triggerOnce delay={NavbarItems.length * 100}>
-        <Button type={"outline"} className="text-lg">
+        <Button type={"outline"} className={classNames("text-lg", className)}>
           Login
         </Button>
       </Fade>

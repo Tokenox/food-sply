@@ -366,12 +366,6 @@ body {
   background-size: 100% auto;
 }
 /* //! Collections */
-.explore_heading {
-  font-family: Roboto Condensed;
-}
-.explore_text {
-  font-family: Roboto Condensed;
-}
 .collection_btn {
   padding: 12px 24px;
   background-color: transparent;
@@ -389,16 +383,6 @@ body {
   background-color: #39b54a;
   color: white;
 }
-.price {
-  font-family: Roboto Condensed;
-}
-.cltn_btn {
-  font-family: Roboto Condensed;
-}
-.cltn_card_text {
-  font-family: Roboto Condensed;
-}
-
 
 /* //! MobileApp styles */
 .background-mobile {

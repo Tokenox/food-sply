@@ -1,14 +1,82 @@
 "use client";
 import Button from "@/common/Button";
 import Image from "next/image";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Slider from "react-slick";
-import { COLLECTION_CARD_DATA } from "../../utils/constants";
+import { COLLECTION_CARD_DATA, contractAddress } from "../../utils/constants";
 import NftCard from "./NftCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useParams } from "next/navigation";
+import {
+  useActiveClaimCondition,
+  useActiveClaimConditionForWallet,
+  useAddress,
+  useClaimConditions,
+  useClaimNFT,
+  useContract,
+  useContractRead,
+} from "@thirdweb-dev/react";
+import axios from "axios";
 
 const NftDetails = () => {
+  // get id from url
+  const { nft } = useParams();
+  console.log("nfttt", nft);
+  const [metadata, setMetadata] = useState({
+    name: "",
+    description: "",
+    image: "",
+    external_url: "",
+    background_color: "",
+    attributes: [],
+    customImage: "",
+    customAnimationUrl: "",
+  });
+
+  const { contract } = useContract(contractAddress);
+  // getting contract uri
+  const { data, isLoading } = useContractRead(contract, "uri", [nft]);
+
+  const { activeClaimConditions, isActiveClaimConditionsLoading } =
+    useActiveClaimCondition(contract);
+  console.log("activeClaimConditions", activeClaimConditions);
+
+  const address = useAddress();
+  console.log("address", address);
+
+  const { claimConditionsForWallet, isClaimConditionsForWalletLoading } =
+    useActiveClaimConditionForWallet(
+      contract,
+      address,
+      0, // Token ID required for ERC1155 contracts here.
+    );
+
+  console.log("claimConditionsForWallet", claimConditionsForWallet);
+  console.log("isClaimConditionsForWalletLoading", isClaimConditionsForWalletLoading);
+  const {
+    data: claimConditions,
+    isClaimConditionsLoading,
+    error,
+  } = useClaimConditions(contract, 0);
+  console.log("claimConditions", claimConditions);
+
+  const { mutate: claimNft, isClaimNftLoading, claimError } = useClaimNFT(contract);
+
+  // fetching metadata
+  useEffect(() => {
+    if (!data) return;
+    if (metadata.image) return;
+    const ipfsHash = data.split("/")[2];
+    // fetch the metadata
+    const fetchMetadata = async () => {
+      const metadata = await axios.get(`https://ipfs.io/ipfs/${ipfsHash}/${nft}`);
+      console.log("metadata", metadata.data);
+      setMetadata(metadata.data);
+    };
+    fetchMetadata();
+  }, [data]);
+
   return (
     <Fragment>
       <div className="section-margin">
@@ -54,7 +122,17 @@ const NftDetails = () => {
                 ))}
               </div>
             </div>
-            <div className="flex justify-center">
+            <div
+              className="flex justify-center"
+              onClick={async () => {
+                const tokenId = 0; // the id of the NFT you want to claim
+                const quantity = 1; // how many NFTs you want to claim
+
+                const tx = await contract.erc1155.claim(tokenId, quantity);
+                const receipt = tx.receipt; // the transaction receipt
+                console.log("receipt", receipt);
+              }}
+            >
               <Button
                 type="fill"
                 className="w-[95%] flex justify-center items-center text-2xl font-bold gap-4"

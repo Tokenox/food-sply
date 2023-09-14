@@ -1,3 +1,5 @@
+export const contractAddress = "0x74604414cB39b8357479c5fB2f4D1dfb5094b7A3";
+
 export const NavbarItems = [
   {
     title: "Home",

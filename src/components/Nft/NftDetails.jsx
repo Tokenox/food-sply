@@ -170,8 +170,9 @@ const NftDetails = () => {
                 type="fill"
                 className="w-[95%] flex justify-center items-center text-2xl font-bold gap-4"
                 onClick={async () => {
-                  const tokenId = 0; // the id of the NFT you want to claim
-                  const quantity = 1; // how many NFTs you want to claim
+                  debugger;
+                  const tokenId = nft; // the id of the NFT you want to claim
+                  const quantity = count; // how many NFTs you want to claim
 
                   const tx = await contract.erc1155.claim(tokenId, quantity);
                   const receipt = tx.receipt; // the transaction receipt

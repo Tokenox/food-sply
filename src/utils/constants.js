@@ -375,32 +375,32 @@ export const NftStepsData = [
 //! Collections
 export const COLLECTION_CARD_DATA = [
   {
-    id: 1,
+    id: 0,
     img: "/nft-images/collection/shop11a-1.png",
     card_heading: "Mixed Smoothie",
   },
   {
-    id: 2,
+    id: 1,
     img: "/nft-images/collection/products_04-768x768.png",
     card_heading: "Virtual Woo Ninja",
   },
   {
-    id: 3,
+    id: 2,
     img: "/nft-images/collection/products_05.png",
     card_heading: "Pomegranate",
   },
   {
-    id: 4,
+    id: 3,
     img: "/nft-images/collection/pexels-daria-shevtsova-1095550-768x512.png",
     card_heading: "fresh Green Chilis",
   },
   {
-    id: 5,
+    id: 4,
     img: "/nft-images/collection/img-3.png",
     card_heading: "Fresh Chilis",
   },
   {
-    id: 6,
+    id: 5,
     img: "/nft-images/collection/img-9.png",
     card_heading: "Green Chilis",
   },

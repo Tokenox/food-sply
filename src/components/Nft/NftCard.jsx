@@ -6,7 +6,7 @@ const NftCard = ({ image, price, token, name, id }) => {
   const { push } = useRouter();
   return (
     <div
-      className="mx-4 bg-white rounded-lg p-3 border border-silver"
+      className="mr-4 md:mr-auto md:mx-4 bg-white rounded-lg p-3 border border-silver flex-basis mb-5"
       onClick={() => push(`/nft/${id}`)}
     >
       <div className="flex flex-col justify-between items-start">

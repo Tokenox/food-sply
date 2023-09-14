@@ -92,15 +92,15 @@ const NftDetails = () => {
             />
           </div>
           {/* Second col */}
-          <div className="col-span-3 flex flex-col gap-10">
+          <div className="col-span-3 flex flex-col gap-6 lg:gap-10">
             <div>
-              <h3 className="text-green text-2xl xl:text-5xl font-bold">Mixed Smoothie</h3>
+              <h3 className="text-green text-2xl xl:text-5xl font-bold mt-5 lg:mt-0">Mixed Smoothie</h3>
               <div className="flex items-center gap-4 mt-3 ">
                 <p className="text-green text-2xl font-medium capitalize">Current Price:</p>
                 <h6 className="text-gradient text-2xl font-bold uppercase">{"$210.00"}</h6>
               </div>
             </div>
-            <div className="bg-[#FEF9F3] border border-[#D2D2D2] py-12 px-11 rounded-xl">
+            <div className="bg-[#FEF9F3] border border-[#D2D2D2] p-5 lg:p-0 lg:py-12 lg:px-11 rounded-xl">
               <p className="text-[#878788] text-xl capitalize font-normal mb-7 leading-9 min-[1700px]::w-[90%]">
                 “On the other hand, we denounce with righteous indignation and dislike men who are
                 so beguiled and demoralized by the charms of pleasure of the moment, so blinded by
@@ -148,7 +148,7 @@ const NftDetails = () => {
       <div className="section-margin">
         <div className="flex items-center gap-5">
           <Image src="/svg/grid-icon.svg" alt="food sply nfts" width={36} height={36} />
-          <h3 className="text-green text-[40px] font-bold">Related NFT</h3>
+          <h3 className="text-green text-2xl lg:text-[40px] font-bold">Related NFT</h3>
         </div>
         <div className="w-full h-[2px] bg-[#D2D2D2] mt-5 mb-14" />
         <Slider {...settings}>

@@ -384,6 +384,11 @@ body {
   color: white;
 }
 
+/*  Steps */
+.flex-basis {
+  flex: 0 0 270px;
+}
+
 /* //! MobileApp styles */
 .background-mobile {
   background: linear-gradient(179deg, #f7941d 0%, rgba(255, 255, 255, 0) 100%);

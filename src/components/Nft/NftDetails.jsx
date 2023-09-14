@@ -37,7 +37,7 @@ const NftDetails = () => {
   const { contract } = useContract(contractAddress);
   // getting contract uri
   const { data, isLoading } = useContractRead(contract, "uri", [nft]);
-
+  console.log("metadata-------------", metadata);
   const { activeClaimConditions, isActiveClaimConditionsLoading } =
     useActiveClaimCondition(contract);
   console.log("activeClaimConditions", activeClaimConditions);
@@ -69,12 +69,15 @@ const NftDetails = () => {
     if (metadata.image) return;
     const ipfsHash = data.split("/")[2];
     // fetch the metadata
-    const fetchMetadata = async () => {
+    (async () => {
       const metadata = await axios.get(`https://ipfs.io/ipfs/${ipfsHash}/${nft}`);
-      console.log("metadata", metadata.data);
-      setMetadata(metadata.data);
-    };
-    fetchMetadata();
+      let imageUri = metadata.data.image.split("/");
+      imageUri = `https://ipfs.io/ipfs/${imageUri?.[2]}/${imageUri?.[3]}`;
+      setMetadata({
+        ...metadata.data,
+        image: imageUri,
+      });
+    })();
   }, [data]);
 
   return (
@@ -83,8 +86,9 @@ const NftDetails = () => {
         <div className="block lg:grid grid-cols-5 gap-12 items-center">
           {/* First col */}
           <div className="col-span-2">
-            <Image
-              src="/nft-images/nfts/smoothie.svg"
+            <img
+              src={metadata?.image}
+              // src="/nft-images/nfts/smoothie.svg"
               alt="nft"
               width={552}
               height={670}
@@ -94,17 +98,19 @@ const NftDetails = () => {
           {/* Second col */}
           <div className="col-span-3 flex flex-col gap-6 lg:gap-10">
             <div>
-              <h3 className="text-green text-2xl xl:text-5xl font-bold mt-5 lg:mt-0">Mixed Smoothie</h3>
+              <h3 className="text-green text-2xl xl:text-5xl font-bold mt-5 lg:mt-0">
+                {metadata?.name}
+              </h3>
               <div className="flex items-center gap-4 mt-3 ">
                 <p className="text-green text-2xl font-medium capitalize">Current Price:</p>
-                <h6 className="text-gradient text-2xl font-bold uppercase">{"$210.00"}</h6>
+                <h6 className="text-gradient text-2xl font-bold uppercase">
+                  {claimConditions?.length && claimConditions?.[0]?.price.toString()}
+                </h6>
               </div>
             </div>
             <div className="bg-[#FEF9F3] border border-[#D2D2D2] p-5 lg:p-0 lg:py-12 lg:px-11 rounded-xl">
               <p className="text-[#878788] text-xl capitalize font-normal mb-7 leading-9 min-[1700px]::w-[90%]">
-                “On the other hand, we denounce with righteous indignation and dislike men who are
-                so beguiled and demoralized by the charms of pleasure of the moment, so blinded by
-                desire. Bzed by the charms of pleasure of the moment.”
+                {metadata?.description}
               </p>
               <div className="flex gap-5 mb-7">
                 <Image src="/user.svg" alt="food suply user" width={64} height={64} />
@@ -120,6 +126,12 @@ const NftDetails = () => {
                     <p className="text-[#878788] text-lg capitalize">{item.value}</p>
                   </div>
                 ))}
+                <div className="flex gap-3 items-center">
+                  <h5 className="text-[#010101] text-xl font-medium">Available:</h5>
+                  <p className="text-[#878788] text-lg capitalize">
+                    {claimConditions?.[0]?.availableSupply || "-"}
+                  </p>
+                </div>
               </div>
             </div>
             <div

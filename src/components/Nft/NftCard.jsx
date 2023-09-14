@@ -1,18 +1,17 @@
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 
-const NftCard = ({ image, price, token, name }) => {
+const NftCard = ({ image, price, token, name, id }) => {
+  const { push } = useRouter();
   return (
-    <div className="mx-4 bg-white rounded-lg p-3 border border-silver">
+    <div
+      className="mx-4 bg-white rounded-lg p-3 border border-silver"
+      onClick={() => push(`/nft/${id}`)}
+    >
       <div className="flex flex-col justify-between items-start">
         <div className=" w-full flex justify-center items-start]">
-          <Image
-            src={image}
-            alt=""
-            width={270}
-            height={290}
-            className="h-[170px] rounded-lg"
-          />
+          <Image src={image} alt="" width={270} height={290} className="h-[170px] rounded-lg" />
         </div>
         <h2 className="text-[#010101] text-xl font-semibold mb-3 mt-3 capitalize">{name}</h2>
         <div className="border-t-2 border-solid border-orange py-5 w-[100%] flex  justify-between items-center">

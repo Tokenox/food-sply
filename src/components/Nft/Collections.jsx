@@ -1,3 +1,4 @@
+"use client"
 import { COLLECTION_CARD_DATA, Collection_UPER_BTNS } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
@@ -13,7 +14,7 @@ const Collections = () => {
       </p>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[1400px]:grid-cols-4  gap-5 mt-12">
         {COLLECTION_CARD_DATA.map((element, index) => (
-          <NftCard key={index} name={element.card_heading} image={element.img} />
+          <NftCard key={index} name={element.card_heading} image={element.img} id={element.id} />
         ))}
       </div>
     </div>

@@ -1,3 +1,4 @@
+"use client";
 import Clients from "@/components/Clients";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
@@ -22,7 +23,7 @@ export default function Home() {
       <Roadmap />
       <Tokenomics />
       <Team />
-      <Faq />
+      {/* <Faq /> */}
       <MobileApp />
       <Clients />
       <Footer />

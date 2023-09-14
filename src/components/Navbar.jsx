@@ -6,9 +6,11 @@ import Button from "../common/Button";
 import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
 import classNames from "classnames";
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 
 const Navbar = ({ className }) => {
   const [color, setColor] = useState(false);
+  const address = useAddress();
 
   useEffect(() => {
     window.addEventListener("scroll", changeColor);
@@ -36,8 +38,11 @@ const Navbar = ({ className }) => {
         ))}
       </div>
       <Fade triggerOnce delay={NavbarItems.length * 100}>
-        <Button type={"outline"} className={classNames("text-lg", className)}>
-          Login
+        <Button
+          type={"outline"}
+          className={classNames("text-lg !py-1 !px-2 mt-3 connectWalletCOntainer", className)}
+        >
+          <ConnectWallet theme="light" className="" />
         </Button>
       </Fade>
     </div>

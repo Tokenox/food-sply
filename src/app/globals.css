@@ -393,3 +393,16 @@ body {
 .background-mobile {
   background: linear-gradient(179deg, #f7941d 0%, rgba(255, 255, 255, 0) 100%);
 }
+
+.connectWalletCOntainer button:focus {
+  box-shadow: none !important;
+}
+.connectWalletCOntainer button,
+.connectWalletCOntainer button:hover {
+  background-color: transparent;
+  border: none;
+}
+
+.connectWalletCOntainer span {
+  color: rgb(186, 183, 183) !important;
+}

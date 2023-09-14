@@ -26,7 +26,7 @@ const NftDetailsPage = () => {
           }}
         />
       )}
-      <div className="section-margin-x py-4 flex justify-between items-center">
+      <div className="lg:hidden section-margin-x py-4 flex justify-between items-center">
         <Image src={"/logo-sm.svg"} alt="Food sply" width={132} height={48} />
         <div
           className=""

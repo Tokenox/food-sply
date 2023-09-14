@@ -23,6 +23,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.all-unset {
+  all: unset;
+}
+
 .line {
   background: radial-gradient(
     63554524.58% 26749.62% at 60.03% -19649.01%,
@@ -405,4 +409,16 @@ body {
 
 .connectWalletCOntainer span {
   color: rgb(186, 183, 183) !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

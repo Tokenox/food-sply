@@ -22,7 +22,7 @@ import axios from "axios";
 const NftDetails = () => {
   // get id from url
   const { nft } = useParams();
-  console.log("nfttt", nft);
+  const [count, setCount] = useState(1);
   const [metadata, setMetadata] = useState({
     name: "",
     description: "",
@@ -134,20 +134,49 @@ const NftDetails = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="flex justify-center"
-              onClick={async () => {
-                const tokenId = 0; // the id of the NFT you want to claim
-                const quantity = 1; // how many NFTs you want to claim
-
-                const tx = await contract.erc1155.claim(tokenId, quantity);
-                const receipt = tx.receipt; // the transaction receipt
-                console.log("receipt", receipt);
-              }}
-            >
+            <div className="flex justify-center gap-16">
+              <div className="flex  justify-between items-center border border-green rounded-lg w-[25%">
+                <span
+                  className="text-green text-3xl px-3 cursor-pointer"
+                  onClick={() => {
+                    if (count > 1) {
+                      setCount(count - 1);
+                    }
+                  }}
+                >
+                  -
+                </span>
+                <input
+                  type="number"
+                  className="w-full h-10 text-center text-black text-xl font-bold outline-none"
+                  value={count}
+                  onChange={(e) => {
+                    if (e.target.value > claimConditions?.[0]?.availableSupply) {
+                      return;
+                    }
+                    setCount(Number(e.target.value));
+                  }}
+                />
+                <span
+                  className="text-green text-2xl px-3 cursor-pointer"
+                  onClick={() => {
+                    if (count < claimConditions?.[0]?.availableSupply) setCount(count + 1);
+                  }}
+                >
+                  +
+                </span>
+              </div>
               <Button
                 type="fill"
                 className="w-[95%] flex justify-center items-center text-2xl font-bold gap-4"
+                onClick={async () => {
+                  const tokenId = 0; // the id of the NFT you want to claim
+                  const quantity = 1; // how many NFTs you want to claim
+
+                  const tx = await contract.erc1155.claim(tokenId, quantity);
+                  const receipt = tx.receipt; // the transaction receipt
+                  console.log("receipt", receipt);
+                }}
               >
                 <Image src="/svg/cart.svg" alt="buy" width={24} height={24} />
                 Buy Now

@@ -7,6 +7,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import { keyframes } from "@emotion/react";
 import { Reveal } from "react-awesome-reveal";
+
 const customAnimation = keyframes`
   0%   { transform: scale(1);}
   60%  { transform: scale(1.15);}
@@ -21,10 +22,7 @@ const Carousel = ({ data }) => {
           <Reveal key={item.id} duration={2000} keyframes={customAnimation}>
             <div
               key={item.id}
-              className={classNames(
-                " px-2 !flex justify-center lg:h-[520px]",
-                {}
-              )}
+              className={classNames(" px-2 !flex justify-center lg:h-[520px]", {})}
             >
               <Image
                 src={item.image}
@@ -36,13 +34,7 @@ const Carousel = ({ data }) => {
             </div>
           </Reveal>
         ) : (
-          <div
-            key={item.id}
-            className={classNames(
-              " px-2 !flex justify-center lg:h-[520px]",
-              {}
-            )}
-          >
+          <div key={item.id} className={classNames(" px-2 !flex justify-center lg:h-[520px]", {})}>
             <Image
               src={item.image}
               alt="Popular product"
@@ -51,7 +43,7 @@ const Carousel = ({ data }) => {
               className="transition-all"
             />
           </div>
-        )
+        ),
       )}
     </Slider>
   );
@@ -65,7 +57,7 @@ function SampleNextArrow(props) {
     <div
       className={classNames(
         " !bg-light-green !bg-[url('/icon/right-arrow.svg')] !bg-no-repeat !bg-center !bg-[length:45%] !rounded-full !w-12 !h-12  hover:!bg-orange hover:!transition-all",
-        className
+        className,
       )}
       onClick={onClick}
     />
@@ -78,7 +70,7 @@ function SamplePrevArrow(props) {
     <div
       className={classNames(
         "!bg-light-green !bg-[url('/icon/left-arrow.svg')] !bg-no-repeat !bg-center !bg-[length:45%] !rounded-full !w-12 !h-12 hover:!bg-orange hover:!transition-all",
-        className
+        className,
       )}
       onClick={onClick}
     />

@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 import { Roboto_Condensed } from "next/font/google";
 
@@ -7,15 +8,14 @@ const roboto = Roboto_Condensed({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Food Sply",
-  description: "Food Sply is a food delivery service.",
-};
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <ThirdwebProvider activeChain={5} clientId="43ddfb024b02c0b460b50583f25eea3f">
+        <body className={roboto.className}>{children}</body>
+      </ThirdwebProvider>
     </html>
   );
 }

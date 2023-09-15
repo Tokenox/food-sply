@@ -67,18 +67,45 @@ const NftDetails = () => {
   useEffect(() => {
     if (!data) return;
     if (metadata.image) return;
-    const ipfsHash = data.split("/")[2];
-    // fetch the metadata
-    (async () => {
-      const metadata = await axios.get(`https://ipfs.io/ipfs/${ipfsHash}/${nft}`);
-      let imageUri = metadata.data.image.split("/");
-      imageUri = `https://ipfs.io/ipfs/${imageUri?.[2]}/${imageUri?.[3]}`;
-      setMetadata({
-        ...metadata.data,
-        image: imageUri,
-      });
-    })();
+    (async () => fetchMetaData())();
   }, [data]);
+
+  const fetchMetaData = async () => {
+    const ipfsHash = data.split("/")[2];
+    const metadata = await axios.get(`https://ipfs.io/ipfs/${ipfsHash}/${nft}`);
+    let imageUri = metadata.data.image.split("/");
+    imageUri = `https://ipfs.io/ipfs/${imageUri?.[2]}/${imageUri?.[3]}`;
+    setMetadata({
+      ...metadata.data,
+      image: imageUri,
+    });
+  };
+
+  const handleClaim = async () => {
+    try {
+      const tokenId = nft; // the id of the NFT you want to claim
+      const quantity = count; // how many NFTs you want to claim
+      const tx = await contract.erc1155.claim(tokenId, quantity);
+      const receipt = tx.receipt; // the transaction receipt
+      console.log("receipt", receipt);
+      if (receipt.status === 1) {
+        await fetchMetaData();
+        alert("Claimed Successfully");
+        console.log("***************Claimed Successfully***********");
+      }
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
+  // convert price to ether
+  const convertToEther = (weiValue) => {
+    if (claimConditions && claimConditions.length) {
+      let etherValue = parseFloat(weiValue) / Math.pow(10, 18);
+      const ether = etherValue.toFixed(18).replace(/\.?0+$/, "");
+      return ether;
+    }
+  };
 
   return (
     <Fragment>
@@ -104,7 +131,8 @@ const NftDetails = () => {
               <div className="flex items-center gap-4 mt-3 ">
                 <p className="text-green text-2xl font-medium capitalize">Current Price:</p>
                 <h6 className="text-gradient text-2xl font-bold uppercase">
-                  {claimConditions?.length && claimConditions?.[0]?.price.toString()}
+                  {convertToEther(claimConditions?.[0]?.price.toString())} (Eth)
+                  {/* {claimConditions?.length && claimConditions?.[0]?.price.toString()} */}
                 </h6>
               </div>
             </div>
@@ -168,19 +196,15 @@ const NftDetails = () => {
               </div>
               <Button
                 type="fill"
-                className="w-[95%] flex justify-center items-center text-2xl font-bold gap-4"
-                onClick={async () => {
-                  debugger;
-                  const tokenId = nft; // the id of the NFT you want to claim
-                  const quantity = count; // how many NFTs you want to claim
-
-                  const tx = await contract.erc1155.claim(tokenId, quantity);
-                  const receipt = tx.receipt; // the transaction receipt
-                  console.log("receipt", receipt);
-                }}
+                className="w-[95%] flex justify-center items-center text-xl font-bold gap-4 text-white"
+                onClick={handleClaim}
               >
                 <Image src="/svg/cart.svg" alt="buy" width={24} height={24} />
-                Buy Now
+                Buy Now (
+                {(convertToEther(claimConditions?.[0]?.price.toString()) * count)
+                  .toFixed(18)
+                  .replace(/\.?0+$/, "")}{" "}
+                Eth)
               </Button>
             </div>
           </div>

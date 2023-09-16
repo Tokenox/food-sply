@@ -3,8 +3,6 @@ import React, { Fragment, useState } from "react";
 import Button from "@/common/Button";
 import Image from "next/image";
 import Navbar from "../Navbar";
-import ladyVector from "../../../public/nft-images/header/lady-vector.svg";
-import menVector from "../../../public/nft-images/header/men-vector.svg";
 import SlideDownMenu from "../SlideDownMenu";
 import { HamburgerIcon } from "../../../public";
 import { NavbarItems } from "@/utils/constants";

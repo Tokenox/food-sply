@@ -42,7 +42,7 @@ const Navbar = ({ className }) => {
           type={"outline"}
           className={classNames("text-lg !py-1 !px-2 mt-3 connectWalletCOntainer", className)}
         >
-          <ConnectWallet theme="light" className="" />
+          <ConnectWallet theme="light" />
         </Button>
       </Fade>
     </div>

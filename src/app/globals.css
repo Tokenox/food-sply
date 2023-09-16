@@ -406,9 +406,12 @@ body {
   background-color: transparent;
   border: none;
 }
+.css-1ugqqba{
+  color:#326542 !important;
+}
 
 .connectWalletCOntainer span {
-  color: rgb(186, 183, 183) !important;
+  color: rgb(169, 164, 164) !important;
 }
 
 /* Chrome, Safari, Edge, Opera */

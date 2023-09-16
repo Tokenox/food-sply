@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <div id="home">
-      <div className="hidden lg:block h-screen bg-[url('/svg/header-bg.svg')] bg-no-repeat bg-cover bg-center min-h-[800px]">
+      <div className="hidden lg:block h-screen bg-[url('/svg/header-bg.png')] bg-no-repeat bg-cover bg-center min-h-[800px]">
         <Navbar />
         <div className="section-margin-x flex justify-between items-center h-[75%]">
           {/* First Col */}

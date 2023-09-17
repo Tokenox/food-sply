@@ -58,7 +58,7 @@ const NftDetails = () => {
     data: claimConditions,
     isClaimConditionsLoading,
     error,
-  } = useClaimConditions(contract, 0);
+  } = useClaimConditions(contract, nft);
   console.log("claimConditions", claimConditions);
 
   const { mutate: claimNft, isClaimNftLoading, claimError } = useClaimNFT(contract);
